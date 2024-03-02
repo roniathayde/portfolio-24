@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={`bg-gray-50 ${inter.className}`}>
         <Header />
         <main className="flex  justify-center">
-          <div className="w-full max-w-3xl">{children}</div>
+          <div className="w-full max-w-4xl px-8 py-28">{children}</div>
         </main>
         <Footer />
       </body>
