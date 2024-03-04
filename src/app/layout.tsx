@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
 
-import { Inter } from 'next/font/google'
 import './globals.css'
-import { Header } from './components/header'
-import { Footer } from './components/footer'
-
+import { Layout } from './_layout'
+import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -19,12 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-br" className="">
-      <body className={`bg-gray-50 ${inter.className}`}>
-        <Header />
-        <main className="flex  justify-center">
-          <div className="w-full max-w-4xl px-8 py-28">{children}</div>
-        </main>
-        <Footer />
+      <body
+        className={` max-h-screen overflow-hidden bg-gray-50 ${inter.className}`}
+      >
+        <Layout>{children}</Layout>
       </body>
     </html>
   )
