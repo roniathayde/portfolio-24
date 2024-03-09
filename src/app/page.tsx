@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <div className="flex  w-full max-w-4xl flex-col   gap-24 px-8 py-28">
-        <section className="grid grid-cols-2 gap-5 ">
+        <section className="flex flex-col items-center gap-5 lg:grid lg:grid-cols-2  ">
           <article className="pt-7">
             <h1 className="mb-6 max-w-80 text-2xl font-semibold text-slate-700">
               Oi, eu sou Roni, um{' '}
@@ -63,10 +63,10 @@ export default function Home() {
           </article>
         </section>
         <section>
-          <h2 className="mb-6 text-2xl font-bold tracking-tight text-slate-900">
+          <h2 className="mb-6 text-center text-2xl font-bold tracking-tight text-slate-900 lg:text-left">
             Sites concluídos
           </h2>
-          <article className="grid grid-cols-2 gap-6">
+          <article className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-2">
             <div className="flex flex-col gap-2 rounded bg-gray-100 p-3">
               <Image
                 src={ImageProject1}
@@ -111,10 +111,10 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 className="mb-6 text-2xl font-bold tracking-tight text-slate-900">
+          <h2 className="mb-6 text-center  text-2xl font-bold tracking-tight text-slate-900 lg:text-left">
             Alguns dos meus projetos
           </h2>
-          <article className="grid grid-cols-2 gap-6">
+          <article className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-2">
             <Link
               href="https://github.com/roniathayde/feed-typescript"
               className="flex flex-col gap-2 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors"
@@ -159,10 +159,10 @@ export default function Home() {
         </section>
 
         <section>
-          <h2 className="mb-6 text-2xl font-bold tracking-tight text-slate-900">
+          <h2 className="mb-6 text-center text-2xl font-bold tracking-tight text-slate-900 lg:text-left">
             Alguns cursos realizados
           </h2>
-          <article className="grid grid-cols-2 gap-6">
+          <article className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-2">
             <Link
               href="https://www.rocketseat.com.br/"
               target="_blank"
@@ -172,6 +172,7 @@ export default function Home() {
                 src={ImageCourse1}
                 width={92}
                 height={72}
+                className="min-w-[92px]"
                 alt="imagem ilustrativa de curso X"
               />
               <div className="flex flex-col">
@@ -194,6 +195,7 @@ export default function Home() {
                 width={92}
                 height={72}
                 alt="imagem ilustrativa de curso X"
+                className="min-w-[92px]"
               />
               <div className="flex flex-col">
                 <h3 className="text-base font-semibold text-slate-600">
@@ -215,6 +217,7 @@ export default function Home() {
                 width={92}
                 height={72}
                 alt="imagem ilustrativa de curso X"
+                className="min-w-[92px]"
               />
               <div className="flex flex-col">
                 <h3 className="text-base font-semibold text-slate-600">
@@ -236,6 +239,7 @@ export default function Home() {
                 width={92}
                 height={72}
                 alt="imagem ilustrativa de curso X"
+                className="min-w-[92px]"
               />
               <div className="flex flex-col">
                 <h3 className="text-base font-semibold text-slate-600">

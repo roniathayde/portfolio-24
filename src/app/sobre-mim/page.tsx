@@ -6,7 +6,7 @@ export default function SobreMim() {
     <>
       <div className="flex  w-full max-w-4xl flex-col   gap-24 px-8 py-28">
         <section>
-          <article className="flex items-start">
+          <article className="flex flex-col items-start lg:flex-row">
             <div>
               <h1 className="mb-7 max-w-96 text-2xl font-bold">
                 Conheça um pouco mais sobre{' '}

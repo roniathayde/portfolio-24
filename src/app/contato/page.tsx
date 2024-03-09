@@ -4,14 +4,14 @@ import { Mail, Phone, User } from 'lucide-react'
 
 export default function Contato() {
   return (
-    <div className="flex  w-full max-w-6xl    gap-24 px-8 py-28">
-      <section className="flex w-full gap-10">
+    <div className="flex  w-full max-w-6xl  gap-24 px-3 py-28 lg:px-8">
+      <section className="flex w-full flex-col gap-10 lg:flex-row">
         <article>
           <h1 className="mb-7 text-2xl font-bold tracking-tight text-slate-900">
             Entre em contato
           </h1>
           <form className="flex flex-col gap-2">
-            <div className="flex gap-2">
+            <div className="flex flex-col gap-2 lg:flex-row">
               <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700">
                 <div className="px-4 py-6">
                   <User className="size-6 text-slate-500" />
@@ -27,7 +27,7 @@ export default function Contato() {
                     type="text"
                     name="first-name"
                     id="first-name"
-                    className="text-base font-semibold text-slate-800 outline-none"
+                    className="bg-transparent text-base font-semibold text-slate-800 outline-none"
                   />
                 </div>
               </div>
@@ -46,7 +46,7 @@ export default function Contato() {
                     type="text"
                     name="last-name"
                     id="last-name"
-                    className="text-base font-semibold text-slate-800 outline-none"
+                    className="bg-transparent text-base font-semibold text-slate-800 outline-none"
                   />
                 </div>
               </div>
@@ -66,7 +66,7 @@ export default function Contato() {
                   type="text"
                   name="e-mail"
                   id="e-mail"
-                  className="text-base font-semibold text-slate-800 outline-none"
+                  className="bg-transparent text-base font-semibold text-slate-800 outline-none"
                 />
               </div>
             </div>
@@ -85,7 +85,7 @@ export default function Contato() {
                   type="text"
                   name="phone"
                   id="phone"
-                  className="text-base font-semibold text-slate-800 outline-none"
+                  className="bg-transparent text-base font-semibold text-slate-800 outline-none"
                 />
               </div>
             </div>
@@ -100,20 +100,20 @@ export default function Contato() {
                 <textarea
                   name="phone"
                   id="phone"
-                  className="resize-none text-base font-semibold text-slate-800 outline-none"
+                  className="resize-none bg-transparent text-base font-semibold text-slate-800 outline-none"
                 ></textarea>
               </div>
             </div>
 
             <button
               type="submit"
-              className="focus-visible:ring-ocean-500 hover:border-ocean-400 focus-visible:border-ocean-400 bg-ocean-500 rounded border-2 border-transparent p-4 text-lg font-bold text-slate-100 outline-none focus-visible:ring-2"
+              className="rounded border-2 border-transparent bg-ocean-500 p-4 text-lg font-bold text-slate-100 outline-none hover:border-ocean-400 focus-visible:border-ocean-400 focus-visible:ring-2 focus-visible:ring-ocean-500"
             >
               Enviar mensagem
             </button>
           </form>
         </article>
-        <article>
+        <article className="flex justify-center">
           <Image
             src={ImagemHomemSentado}
             alt="imagem ilustrativa de um avatar de um homem sentado mexendo no notebook ao lado de uma janela com vista para as nuvens perto de sua estante de livros"
