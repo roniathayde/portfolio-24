@@ -23,7 +23,7 @@ export function Layout({
             <Footer />
           </ScrollArea.Viewport>
           <ScrollArea.Scrollbar
-            className=" flex  w-1 translate-y-1.5  flex-col bg-[#3d3d5a]"
+            className=" flex  w-1 translate-y-1.5  flex-col bg-slate-600"
             orientation="vertical"
           >
             <ScrollArea.Thumb className="relative rounded-lg bg-[#9CC2FF] " />

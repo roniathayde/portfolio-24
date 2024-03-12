@@ -7,12 +7,12 @@ export default function Contato() {
     <div className="flex  w-full max-w-6xl  gap-24 px-3 py-28 lg:px-8">
       <section className="flex w-full flex-col gap-10 lg:flex-row">
         <article>
-          <h1 className="mb-7 text-2xl font-bold tracking-tight text-slate-900">
+          <h1 className="mb-7 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-200">
             Entre em contato
           </h1>
           <form className="flex flex-col gap-2">
             <div className="flex flex-col gap-2 lg:flex-row">
-              <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700">
+              <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700 dark:border-slate-300 dark:focus-within:ring-slate-400">
                 <div className="px-4 py-6">
                   <User className="size-6 text-slate-500" />
                 </div>
@@ -27,11 +27,11 @@ export default function Contato() {
                     type="text"
                     name="first-name"
                     id="first-name"
-                    className="bg-transparent text-base font-semibold text-slate-800 outline-none"
+                    className="bg-transparent text-base font-semibold text-slate-800 outline-none dark:text-slate-200"
                   />
                 </div>
               </div>
-              <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700">
+              <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700 dark:border-slate-300 dark:focus-within:ring-slate-400">
                 <div className="px-4 py-6">
                   <User className="size-6 text-slate-500" />
                 </div>
@@ -46,12 +46,12 @@ export default function Contato() {
                     type="text"
                     name="last-name"
                     id="last-name"
-                    className="bg-transparent text-base font-semibold text-slate-800 outline-none"
+                    className="bg-transparent text-base font-semibold text-slate-800 outline-none dark:text-slate-200"
                   />
                 </div>
               </div>
             </div>
-            <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700">
+            <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700 dark:border-slate-300 dark:focus-within:ring-slate-400">
               <div className="px-4 py-6">
                 <Mail className="size-6 text-slate-500" />
               </div>
@@ -66,11 +66,11 @@ export default function Contato() {
                   type="text"
                   name="e-mail"
                   id="e-mail"
-                  className="bg-transparent text-base font-semibold text-slate-800 outline-none"
+                  className=" bg-transparent text-base font-semibold text-slate-800 outline-none dark:text-slate-200"
                 />
               </div>
             </div>
-            <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700">
+            <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700 dark:border-slate-300 dark:focus-within:ring-slate-400">
               <div className="px-4 py-6">
                 <Phone className="size-6 text-slate-500" />
               </div>
@@ -85,11 +85,11 @@ export default function Contato() {
                   type="text"
                   name="phone"
                   id="phone"
-                  className="bg-transparent text-base font-semibold text-slate-800 outline-none"
+                  className=" bg-transparent text-base font-semibold text-slate-800 outline-none dark:text-slate-200"
                 />
               </div>
             </div>
-            <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700">
+            <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700 dark:border-slate-300 dark:focus-within:ring-slate-400">
               <div className="flex w-full flex-col p-4">
                 <label
                   htmlFor="phone"
@@ -100,7 +100,7 @@ export default function Contato() {
                 <textarea
                   name="phone"
                   id="phone"
-                  className="resize-none bg-transparent text-base font-semibold text-slate-800 outline-none"
+                  className="resize-none bg-transparent text-base font-semibold text-slate-800 outline-none dark:text-slate-200"
                 ></textarea>
               </div>
             </div>

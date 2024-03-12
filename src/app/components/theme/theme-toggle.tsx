@@ -1,4 +1,4 @@
-import { Moon, Sun } from 'lucide-react'
+import { Laptop, Moon, Sun } from 'lucide-react'
 
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 
@@ -10,9 +10,9 @@ export function ThemeToggle() {
   return (
     <DropdownMenu.Root>
       <DropdownMenu.Trigger asChild>
-        <button className="relative flex size-9 items-center justify-center rounded-md border-2 border-slate-200">
+        <button className="relative flex size-9 items-center justify-center rounded-md border-2 border-slate-200 dark:border-slate-600">
           <Sun className="absolute h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+          <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 dark:text-slate-500" />
           <span className="sr-only">Toggle theme</span>
         </button>
       </DropdownMenu.Trigger>
@@ -21,27 +21,30 @@ export function ThemeToggle() {
           side="bottom"
           align="end"
           sideOffset={4}
-          className="flex flex-col gap-3 rounded bg-slate-50 px-4 py-4"
+          className="flex flex-col gap-3 rounded bg-slate-50 px-4 py-4 dark:bg-slate-600"
         >
           <DropdownMenu.Item
-            className="cursor-pointer py-0.5 outline-none"
+            className="flex cursor-pointer items-center justify-between gap-1 py-0.5 outline-none dark:text-slate-200"
             onClick={() => setTheme('light')}
           >
             Light
+            <Sun className="size-4" />
           </DropdownMenu.Item>
-          <DropdownMenu.Separator className="h-0.5 bg-slate-200" />
+          <DropdownMenu.Separator className="h-0.5 bg-slate-200 dark:bg-slate-500" />
           <DropdownMenu.Item
-            className="cursor-pointer outline-none"
+            className="flex cursor-pointer items-center justify-between gap-1 py-0.5 outline-none dark:text-slate-200 "
             onClick={() => setTheme('dark')}
           >
             Dark
+            <Moon className="size-4" />
           </DropdownMenu.Item>
-          <DropdownMenu.Separator className="h-0.5 bg-slate-200" />
+          <DropdownMenu.Separator className="h-0.5 bg-slate-200 dark:bg-slate-500" />
           <DropdownMenu.Item
-            className="cursor-pointer outline-none"
+            className="flex cursor-pointer items-center justify-between gap-1 py-0.5 outline-none dark:text-slate-200"
             onClick={() => setTheme('system')}
           >
             System
+            <Laptop className="size-4" />
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
