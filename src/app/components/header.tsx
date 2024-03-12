@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import { Menu } from 'lucide-react'
-
 import { ThemeToggle } from './theme/theme-toggle'
 
 export function Header() {
@@ -40,29 +39,31 @@ export function Header() {
             </DropdownMenu.Trigger>
 
             <DropdownMenu.Portal>
-              <DropdownMenu.Content
-                align="end"
-                className="flex flex-col gap-2 rounded bg-slate-200 p-5 dark:bg-slate-700"
-              >
-                <DropdownMenu.Item
-                  asChild
-                  className="outline-none dark:text-slate-200"
+              <div>
+                <DropdownMenu.Content
+                  align="end"
+                  className="flex flex-col gap-2 rounded bg-slate-200 p-5 dark:bg-slate-700"
                 >
-                  <Link href="/">Trabalhos</Link>
-                </DropdownMenu.Item>
-                <DropdownMenu.Item
-                  asChild
-                  className="outline-none dark:text-slate-200"
-                >
-                  <Link href="/sobre-mim">Sobre mim</Link>
-                </DropdownMenu.Item>
-                <DropdownMenu.Item
-                  asChild
-                  className="outline-none dark:text-slate-200"
-                >
-                  <Link href="/contato">Contato</Link>
-                </DropdownMenu.Item>
-              </DropdownMenu.Content>
+                  <DropdownMenu.Item
+                    asChild
+                    className="outline-none dark:text-slate-200"
+                  >
+                    <Link href="/">Trabalhos</Link>
+                  </DropdownMenu.Item>
+                  <DropdownMenu.Item
+                    asChild
+                    className="outline-none dark:text-slate-200"
+                  >
+                    <Link href="/sobre-mim">Sobre mim</Link>
+                  </DropdownMenu.Item>
+                  <DropdownMenu.Item
+                    asChild
+                    className="outline-none dark:text-slate-200"
+                  >
+                    <Link href="/contato">Contato</Link>
+                  </DropdownMenu.Item>
+                </DropdownMenu.Content>
+              </div>
             </DropdownMenu.Portal>
           </DropdownMenu.Root>
 

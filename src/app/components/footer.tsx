@@ -10,7 +10,7 @@ export function Footer() {
           </span>
         </div>
         <div className="flex flex-1 flex-col">
-          <span className="mb-3 bg-gradient-to-l from-[#9CC2FF] via-[#547AFF] to-[#263789] bg-clip-text text-3xl font-semibold tracking-tight text-transparent">
+          <span className="mb-3 bg-gradient-to-l from-[#9CC2FF] via-[#547AFF] to-[#263789] bg-clip-text text-3xl font-semibold tracking-tight text-transparent dark:to-slate-200">
             Bom te ver aqui!
           </span>
           <span className="mb-2 text-sm font-medium text-slate-500 dark:text-slate-200">

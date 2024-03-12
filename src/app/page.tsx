@@ -14,7 +14,7 @@ export default function Home() {
           <article className="pt-7">
             <h1 className="mb-6 max-w-80 text-2xl font-semibold text-slate-700 dark:text-slate-200">
               Oi, eu sou Roni, um{' '}
-              <span className="  bg-gradient-to-l from-[#9CC2FF] via-[#547AFF] to-[#263789] bg-clip-text  text-transparent ">
+              <span className="  bg-gradient-to-l from-[#9CC2FF] via-[#547AFF] to-[#263789] bg-clip-text text-transparent  dark:to-slate-200 ">
                 software developer
               </span>{' '}
               com paixão no Front End
