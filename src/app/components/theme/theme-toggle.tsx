@@ -24,27 +24,27 @@ export function ThemeToggle() {
           className="flex flex-col gap-3 rounded bg-slate-50 px-4 py-4 dark:bg-slate-600"
         >
           <DropdownMenu.Item
-            className="flex cursor-pointer items-center justify-between gap-1 py-0.5 outline-none dark:text-slate-200"
+            className="flex cursor-pointer items-center  gap-1 py-0.5 outline-none dark:text-slate-200"
             onClick={() => setTheme('light')}
           >
-            Light
             <Sun className="size-4" />
+            Light
           </DropdownMenu.Item>
           <DropdownMenu.Separator className="h-0.5 bg-slate-200 dark:bg-slate-500" />
           <DropdownMenu.Item
-            className="flex cursor-pointer items-center justify-between gap-1 py-0.5 outline-none dark:text-slate-200 "
+            className="flex cursor-pointer items-center  gap-1 py-0.5 outline-none dark:text-slate-200 "
             onClick={() => setTheme('dark')}
           >
-            Dark
             <Moon className="size-4" />
+            Dark
           </DropdownMenu.Item>
           <DropdownMenu.Separator className="h-0.5 bg-slate-200 dark:bg-slate-500" />
           <DropdownMenu.Item
-            className="flex cursor-pointer items-center justify-between gap-1 py-0.5 outline-none dark:text-slate-200"
+            className="flex cursor-pointer items-center  gap-1 py-0.5 outline-none dark:text-slate-200"
             onClick={() => setTheme('system')}
           >
-            System
             <Laptop className="size-4" />
+            System
           </DropdownMenu.Item>
         </DropdownMenu.Content>
       </DropdownMenu.Portal>
