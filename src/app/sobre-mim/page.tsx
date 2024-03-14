@@ -6,8 +6,8 @@ export default function SobreMim() {
     <>
       <div className="flex  w-full max-w-4xl flex-col   gap-24 px-8 py-28">
         <section>
-          <article className="flex flex-col items-start lg:flex-row">
-            <div>
+          <article className="flex  flex-col items-start gap-12 lg:flex-row">
+            <div className="max-w-[400px] ">
               <h1 className="mb-7 max-w-96 text-2xl font-bold dark:text-slate-200">
                 Conheça um pouco mais sobre{' '}
                 <span className="mb-3 bg-gradient-to-l from-[#9CC2FF] via-[#547AFF] to-[#263789] bg-clip-text text-3xl font-semibold tracking-tight text-transparent dark:to-slate-200">
