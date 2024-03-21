@@ -52,7 +52,7 @@ export default function Contato() {
         message,
       }
 
-      const response = await fetch('http://localhost:3000/api/form', {
+      const response = await fetch('https://ronilucas.com/api/form', {
         method: 'POST',
         body: JSON.stringify(data),
       })
