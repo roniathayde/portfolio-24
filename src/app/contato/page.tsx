@@ -180,15 +180,23 @@ export default function Contato() {
                 {errors.message.message}
               </span>
             )}
-            <button
-              type="submit"
-              className="flex items-center justify-center rounded border-2 border-transparent bg-ocean-500 p-4 text-lg font-bold text-slate-100 outline-none hover:border-ocean-400 focus-visible:border-ocean-400 focus-visible:ring-2 focus-visible:ring-ocean-500"
-            >
-              {!isSubmitting && 'Enviar mensagem'}
-              {isSubmitting && (
-                <Loader2 className="size-6 animate-spin text-slate-50" />
-              )}
-            </button>
+            {!isSubmitting && (
+              <button
+                type="submit"
+                className="flex items-center justify-center rounded border-2 border-transparent bg-ocean-500 p-4 text-lg font-bold text-slate-100 outline-none hover:border-ocean-400 focus-visible:border-ocean-400 focus-visible:ring-2 focus-visible:ring-ocean-500"
+              >
+                Enviar mensagem
+              </button>
+            )}
+
+            {isSubmitting && (
+              <button
+                type="submit"
+                className="flex items-center justify-center rounded border-2 border-ocean-500 bg-transparent p-4 text-lg font-bold text-slate-100 outline-none hover:border-ocean-400 focus-visible:border-ocean-400 focus-visible:ring-2 focus-visible:ring-ocean-500"
+              >
+                <Loader2 className="size-6 animate-spin text-ocean-500" />
+              </button>
+            )}
           </form>
         </article>
         <article className="flex justify-center">
