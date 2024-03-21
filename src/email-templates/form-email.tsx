@@ -20,11 +20,11 @@ interface VercelInviteUserEmailProps {
 }
 
 export const WebsiteFormMessage = ({
-  firstName = '',
-  lastName = '',
-  email = '',
-  phone = '',
-  message = '',
+  firstName,
+  lastName,
+  email,
+  phone,
+  message,
 }: VercelInviteUserEmailProps) => {
   const previewText = `Boas vindas ${firstName}!`
 
@@ -59,11 +59,4 @@ export const WebsiteFormMessage = ({
     </Html>
   )
 }
-
-// firstName = '',
-// lastName = '',
-// email = '',
-// phone = '',
-// message = '',
-// text = '',
 export default WebsiteFormMessage
