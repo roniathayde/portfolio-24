@@ -1,3 +1,4 @@
+'use client'
 import { Laptop, Moon, Sun } from 'lucide-react'
 
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
