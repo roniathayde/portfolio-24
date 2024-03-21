@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import { useForm } from 'react-hook-form'
 import { z } from 'zod'
+import { useState } from 'react'
 import { zodResolver } from '@hookform/resolvers/zod'
 
 import ImagemHomemSentado from '../../assets/images/imagem-pagina-de-contato.svg'
@@ -24,6 +25,9 @@ const fieldsFormSchema = z.object({
 type FieldsFormSchema = z.infer<typeof fieldsFormSchema> // tipagem ts inferenciada com zod
 
 export default function Contato() {
+  const [emailSendSuccefully, setEmailSendSuccefully] = useState(false)
+  const [emailError, setEmailError] = useState(false)
+
   const {
     register,
     handleSubmit,
@@ -32,20 +36,34 @@ export default function Contato() {
     resolver: zodResolver(fieldsFormSchema),
   })
 
-  function handleSubmitForm({
+  async function handleSubmitForm({
     firstName,
     lastName,
     email,
     phone,
     message,
   }: FieldsFormSchema) {
-    console.log(firstName, lastName, phone, email, message)
-    return new Promise((resolve) => {
-      setTimeout(() => resolve(true), 1000)
-    })
-  }
+    try {
+      const data = {
+        firstName,
+        lastName,
+        email,
+        phone,
+        message,
+      }
 
-  console.log('isSubmitting', isSubmitting)
+      const response = await fetch('http://localhost:3000/api/form', {
+        method: 'POST',
+        body: JSON.stringify(data),
+      })
+
+      if (response.ok) {
+        setEmailSendSuccefully(true)
+      }
+    } catch (e) {
+      setEmailError(true)
+    }
+  }
 
   return (
     <div className="flex  w-full max-w-6xl  gap-24 px-3 py-28 lg:px-8">
@@ -54,6 +72,17 @@ export default function Contato() {
           <h1 className="mb-7 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-200">
             Entre em contato
           </h1>
+          {emailSendSuccefully && (
+            <span className="mb-2 block text-sm font-medium text-green-400">
+              E-mail enviado com sucesso! Aguarde que entraremos em contato!
+            </span>
+          )}
+          {emailError && (
+            <span className="mb-2 block text-sm font-medium text-red-400">
+              Parece que ocorreu algum erro no envio do formulário. Por
+              gentileza entre em contato informando pontes014@gmail.com
+            </span>
+          )}
           <form
             onSubmit={handleSubmit(handleSubmitForm)}
             className="flex max-w-[567px] flex-col gap-2"
