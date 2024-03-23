@@ -234,7 +234,7 @@ export default function Home() {
               </div>
             </Link>
             <Link
-              href="https://www.rocketseat.com.br/"
+              href="https://www.udemy.com/course/curso-de-reactjs-nextjs-completo-do-basico-ao-avancado/"
               target="_blank"
               className="flex gap-4 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
             >
@@ -257,7 +257,7 @@ export default function Home() {
               </div>
             </Link>
             <Link
-              href="https://www.rocketseat.com.br/"
+              href="https://www.udemy.com/course/javascript-completo-2018-do-iniciante-ao-mestre/"
               target="_blank"
               className="flex gap-4 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
             >
