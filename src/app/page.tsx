@@ -1,8 +1,14 @@
 'use client'
 import Image from 'next/image'
 import AvatarImage from '../assets/images/avatar-on-computer.svg'
-import ImageProject1 from '../assets/images/project-image-1.png'
-import ImageCourse1 from '../assets/images/course-1.png'
+import ImageProject1 from '../assets/images/smartfix-imagem-ilustrativa-do-projeto-roni-lucas.png'
+import ImageProject2 from '../assets/images/larynx-imagem-ilustrativa-do-projeto-roni-lucas.jpg'
+import ImageProject3 from '../assets/images/medguidexp-imagem-ilustrativa-do-projeto-roni-lucas.jpg'
+import ImageProject4 from '../assets/images/abcg-imagem-ilustrativa-do-projeto-roni-lucas.jpg'
+import ImageCourse1 from '../assets/images/rocketseat-cursos-realizados-ronilucas.png'
+import ImageCourse2 from '../assets/images/programadorbr-igor-oliveira-cursos-realizados-ronilucas.jpg'
+import ImageCourse3 from '../assets/images/otavio-miranda-cursos-realizados-ronilucas.png'
+import ImageCourse4 from '../assets/images/servliv-cursos-realizados-ronilucas.png'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 
@@ -76,43 +82,43 @@ export default function Home() {
                 height={200}
               />
               <h3 className="font-bold text-slate-700 dark:text-slate-200 ">
-                nome do projeto
+                Smartfix
               </h3>
             </div>
             <div className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700">
               <Image
-                src={ImageProject1}
+                src={ImageProject2}
                 alt="imagem do site do projeto X"
                 className=" rounded"
                 width={380}
                 height={200}
               />
               <h3 className="font-bold text-slate-700 dark:text-slate-200 ">
-                nome do projeto
+                Larynx
               </h3>
             </div>
             <div className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700">
               <Image
-                src={ImageProject1}
+                src={ImageProject3}
                 alt="imagem do site do projeto X"
                 className=" rounded"
                 width={380}
                 height={200}
               />
               <h3 className="font-bold text-slate-700 dark:text-slate-200 ">
-                nome do projeto
+                MedguideXP
               </h3>
             </div>
             <div className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700">
               <Image
-                src={ImageProject1}
+                src={ImageProject4}
                 alt="imagem do site do projeto X"
                 className=" rounded"
                 width={380}
                 height={200}
               />
               <h3 className="font-bold text-slate-700 dark:text-slate-200 ">
-                nome do projeto
+                ABCG
               </h3>
             </div>
           </article>
@@ -126,6 +132,7 @@ export default function Home() {
             <Link
               href="https://github.com/roniathayde/feed-typescript"
               className="flex flex-col gap-2 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+              target="_blank"
             >
               <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
                 feed
@@ -136,11 +143,12 @@ export default function Home() {
               <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
             </Link>
             <Link
-              href="https://github.com/roniathayde/feed-typescript"
+              href="https://github.com/roniathayde/pizzashop-web"
               className="flex flex-col gap-2 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+              target="_blank"
             >
               <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
-                feed
+                pizzashop-web
               </h3>
               <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
                 Um projeto de estudo para práticar conceitos de reactJS
@@ -148,11 +156,12 @@ export default function Home() {
               <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
             </Link>
             <Link
-              href="https://github.com/roniathayde/feed-typescript"
+              href="https://github.com/roniathayde/nlx-expert-notes"
               className="flex flex-col gap-2 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+              target="_blank"
             >
               <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
-                feed
+                nlx-expert-notes
               </h3>
               <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
                 Um projeto de estudo para práticar conceitos de reactJS
@@ -160,11 +169,12 @@ export default function Home() {
               <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
             </Link>
             <Link
-              href="https://github.com/roniathayde/feed-typescript"
+              href="https://github.com/roniathayde/tailwind-next"
               className="flex flex-col gap-2 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+              target="_blank"
             >
               <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
-                feed
+                tailwind-next
               </h3>
               <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
                 Um projeto de estudo para práticar conceitos de reactJS
@@ -178,7 +188,7 @@ export default function Home() {
           <h2 className="mb-6 text-center text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-200 lg:text-left">
             Alguns cursos realizados
           </h2>
-          <article className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-2">
+          <article className="flex flex-col items-stretch gap-6 lg:grid lg:grid-cols-2">
             <Link
               href="https://www.rocketseat.com.br/"
               target="_blank"
@@ -186,9 +196,9 @@ export default function Home() {
             >
               <Image
                 src={ImageCourse1}
-                width={92}
-                height={72}
-                className="min-w-[92px]"
+                width={91}
+                height={71}
+                className="h-[71px] min-w-[91px]"
                 alt="imagem ilustrativa de curso X"
               />
               <div className="flex flex-col">
@@ -202,23 +212,23 @@ export default function Home() {
               </div>
             </Link>
             <Link
-              href="https://www.rocketseat.com.br/"
+              href="https://programadorbr.com/"
               target="_blank"
               className="flex gap-4 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
             >
               <Image
-                src={ImageCourse1}
-                width={92}
-                height={72}
+                src={ImageCourse2}
+                width={91}
+                height={71}
                 alt="imagem ilustrativa de curso X"
-                className="min-w-[92px]"
+                className="h-[71px] min-w-[91px] object-cover"
               />
               <div className="flex flex-col">
                 <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
-                  Rocketseat
+                  ProgramadorBR
                 </h3>
                 <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
-                  Plataforma de conteúdo educacional tecnológico Fullstack
+                  Fullstack curso focado em JavaScript. Por Igor Oliveira
                 </p>
                 <ArrowUpRight className="size-5 self-end stroke-[3] dark:text-slate-200" />
               </div>
@@ -229,18 +239,19 @@ export default function Home() {
               className="flex gap-4 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
             >
               <Image
-                src={ImageCourse1}
-                width={92}
-                height={72}
+                src={ImageCourse3}
+                width={91}
+                height={71}
                 alt="imagem ilustrativa de curso X"
-                className="min-w-[92px]"
+                className="h-[71px] min-w-[91px] object-cover"
               />
               <div className="flex flex-col">
                 <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
-                  Rocketseat
+                  Curso de React.Js e Next.Js (nível intermediário e avançado)
                 </h3>
                 <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
-                  Plataforma de conteúdo educacional tecnológico Fullstack
+                  Conteúdo do ecossistema React com Next. Contextos, Data
+                  Fetching e mais. por Otavio Miranda
                 </p>
                 <ArrowUpRight className="size-5 self-end stroke-[3] dark:text-slate-200" />
               </div>
@@ -251,18 +262,19 @@ export default function Home() {
               className="flex gap-4 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
             >
               <Image
-                src={ImageCourse1}
-                width={92}
-                height={72}
+                src={ImageCourse4}
+                width={91}
+                height={71}
                 alt="imagem ilustrativa de curso X"
-                className="min-w-[92px]"
+                className="h-[71px] min-w-[91px]"
               />
               <div className="flex flex-col">
                 <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
-                  Rocketseat
+                  Curso de JavaScript Completo
                 </h3>
                 <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
-                  Plataforma de conteúdo educacional tecnológico Fullstack
+                  Curso de Javascript completo. Classes, funções, arrays e mais.
+                  Por Daniel Tapias Morales
                 </p>
                 <ArrowUpRight className="size-5 self-end stroke-[3] dark:text-slate-200" />
               </div>
