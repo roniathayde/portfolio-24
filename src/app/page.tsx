@@ -27,7 +27,7 @@ export default function Home() {
             </h1>
 
             <ul>
-              <li className="flex items-center gap-1 dark:text-slate-200">
+              <li className="flex flex-nowrap items-center gap-1 text-nowrap dark:text-slate-200">
                 Desenvolvedor fullstack na
                 <Link
                   href="https://suryamkt.com.br"
@@ -36,6 +36,7 @@ export default function Home() {
                 >
                   SuryaMKT <ArrowUpRight className="size-5 stroke-[3]" />
                 </Link>
+                &<span className="font-semibold">SuryaMED</span>
               </li>
               <li className="flex items-center gap-1 dark:text-slate-200">
                 Formado pela
