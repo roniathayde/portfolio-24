@@ -1,4 +1,3 @@
-'use client'
 import Image from 'next/image'
 import AvatarImage from '../assets/images/avatar-on-computer.svg'
 import ImageProject1 from '../assets/images/smartfix-imagem-ilustrativa-do-projeto-roni-lucas.png'
@@ -11,6 +10,14 @@ import ImageCourse3 from '../assets/images/otavio-miranda-cursos-realizados-roni
 import ImageCourse4 from '../assets/images/servliv-cursos-realizados-ronilucas.png'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
+
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Trabalhos | Roni Lucas',
+  description:
+    'Sites concluídos, cursos e projetos que realizei até aqui como desenvolvedor. Saiba mais!',
+}
 
 export default function Home() {
   return (

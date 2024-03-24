@@ -1,6 +1,12 @@
 import Image from 'next/image'
 import ImagemComMic from '../../assets/images/avatar-no-computador-falando-no-microfone 1.svg'
+import type { Metadata } from 'next'
 
+export const metadata: Metadata = {
+  title: 'Sobre mim | Roni Lucas',
+  description:
+    'Um pouco mais sobre meus interesses profissionais e gostos pessoais. Saiba mais!',
+}
 export default function SobreMim() {
   return (
     <>
