@@ -17,6 +17,34 @@ export const metadata: Metadata = {
   title: 'Trabalhos | Roni Lucas',
   description:
     'Sites concluídos, cursos e projetos que realizei até aqui como desenvolvedor. Saiba mais!',
+  robots: {
+    follow: true,
+    index: true,
+  },
+  openGraph: {
+    images: ['https://www.ronilucas.com/opengraph-image.jpg'],
+    authors: 'Roni Lucas',
+    countryName: 'Brazil',
+    emails: 'pontes014@gmail.com',
+    firstName: 'Roni',
+    lastName: 'Lucas',
+    locale: 'pt-br',
+  },
+  twitter: {
+    images: ['https://www.ronilucas.com/opengraph-image.jpg'],
+    site: 'https://www.ronilucas.com',
+  },
+  icons: {
+    icon: '/favicon.ico',
+  },
+  keywords: [
+    'Trabalhos',
+    'Roni Lucas',
+    'Desenvolvedor',
+    'Frontend',
+    'Backend',
+    'Fullstack',
+  ],
 }
 
 export default function Home() {
@@ -84,7 +112,7 @@ export default function Home() {
             <div className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700">
               <Image
                 src={ImageProject1}
-                alt="imagem do site do projeto X"
+                alt="imagem do site smartfix desenvolvido por Roni Lucas"
                 className=" rounded"
                 width={380}
                 height={200}
@@ -96,7 +124,7 @@ export default function Home() {
             <div className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700">
               <Image
                 src={ImageProject2}
-                alt="imagem do site do projeto X"
+                alt="imagem do site Larynx desenvolvido por Roni Lucas"
                 className=" rounded"
                 width={380}
                 height={200}
@@ -108,7 +136,7 @@ export default function Home() {
             <div className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700">
               <Image
                 src={ImageProject3}
-                alt="imagem do site do projeto X"
+                alt="imagem do site MedguideXP desenvolvido por Roni Lucas"
                 className=" rounded"
                 width={380}
                 height={200}
@@ -120,7 +148,7 @@ export default function Home() {
             <div className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700">
               <Image
                 src={ImageProject4}
-                alt="imagem do site do projeto X"
+                alt="imagem do site ABCG desenvolvido por Roni Lucas"
                 className=" rounded"
                 width={380}
                 height={200}
@@ -207,7 +235,7 @@ export default function Home() {
                 width={91}
                 height={71}
                 className="h-[71px] min-w-[91px]"
-                alt="imagem ilustrativa de curso X"
+                alt="imagem ilustrativa do curso da Rocketseat feito pelo Roni Lucas"
               />
               <div className="flex flex-col">
                 <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
@@ -228,7 +256,7 @@ export default function Home() {
                 src={ImageCourse2}
                 width={91}
                 height={71}
-                alt="imagem ilustrativa de curso X"
+                alt="imagem ilustrativa do curso do ProgramadorBR feito pelo Roni Lucas"
                 className="h-[71px] min-w-[91px] object-cover"
               />
               <div className="flex flex-col">
@@ -250,7 +278,7 @@ export default function Home() {
                 src={ImageCourse3}
                 width={91}
                 height={71}
-                alt="imagem ilustrativa de curso X"
+                alt="imagem ilustrativa do curso do Otavio Miranda feito pelo Roni Lucas"
                 className="h-[71px] min-w-[91px] object-cover"
               />
               <div className="flex flex-col">
@@ -273,7 +301,7 @@ export default function Home() {
                 src={ImageCourse4}
                 width={91}
                 height={71}
-                alt="imagem ilustrativa de curso X"
+                alt="imagem ilustrativa do curso da Serliv por Daniel Tapias Morales feito pelo Roni Lucas"
                 className="h-[71px] min-w-[91px]"
               />
               <div className="flex flex-col">
