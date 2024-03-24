@@ -17,9 +17,6 @@ export const metadata: Metadata = {
   title: 'Trabalhos | Roni Lucas',
   description:
     'Sites concluídos, cursos e projetos que realizei até aqui como desenvolvedor. Saiba mais!',
-  openGraph: {
-    images: ['../../assets/images/roni-lucas-imagem-destacada 1.jpg'],
-  },
 }
 
 export default function Home() {
