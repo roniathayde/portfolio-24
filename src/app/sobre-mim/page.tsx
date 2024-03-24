@@ -6,6 +6,9 @@ export const metadata: Metadata = {
   title: 'Sobre mim | Roni Lucas',
   description:
     'Um pouco mais sobre meus interesses profissionais e gostos pessoais. Saiba mais!',
+  openGraph: {
+    images: ['../../assets/images/roni-lucas-imagem-destacada 1.jpg'],
+  },
 }
 export default function SobreMim() {
   return (

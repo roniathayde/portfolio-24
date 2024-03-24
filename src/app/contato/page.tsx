@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Contato | Roni Lucas',
   description:
     'Um desenvolvedor Fullstack com enfâse no usuário em 1º lugar. Saiba mais!',
+  openGraph: {
+    images: ['../../assets/images/roni-lucas-imagem-destacada 1.jpg'],
+  },
 }
 
 export default function Contato() {
