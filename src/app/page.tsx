@@ -61,9 +61,9 @@ export default function Home() {
               com paixão no Front End
             </h1>
 
-            <ul>
-              <li className="flex flex-nowrap items-center gap-1 text-nowrap dark:text-slate-200">
-                Desenvolvedor fullstack na
+            <ul className="flex flex-col gap-3">
+              <li className="flex flex-wrap items-center gap-1 leading-tight  dark:text-slate-200">
+                <span className="text-nowrap">Desenvolvedor fullstack na</span>
                 <Link
                   href="https://suryamkt.com.br"
                   target="_blank"
@@ -73,7 +73,7 @@ export default function Home() {
                 </Link>
                 &<span className="font-semibold">SuryaMED</span>
               </li>
-              <li className="flex items-center gap-1 dark:text-slate-200">
+              <li className="flex flex-wrap items-center gap-1 leading-tight dark:text-slate-200">
                 Formado pela
                 <Link
                   href="https://www.uninove.br"
@@ -83,7 +83,7 @@ export default function Home() {
                   Uninove <ArrowUpRight className="size-5 stroke-[3]" />
                 </Link>
               </li>
-              <li className="flex items-center gap-1 dark:text-slate-200">
+              <li className="flex flex-wrap items-center gap-1 leading-tight dark:text-slate-200">
                 Inspirado em soluções
                 <Link
                   href="/contato"
