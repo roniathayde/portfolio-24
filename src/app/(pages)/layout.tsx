@@ -13,7 +13,12 @@ export default function Layout({
 }>) {
   return (
     <>
-      <ThemeProvider storageKey="pizzashop-theme" defaultTheme="dark">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
         <ScrollArea.Root className="w-full justify-center " type="hover">
           <ScrollArea.Viewport className="flex max-h-screen flex-col items-center overflow-y-scroll    ">
             <Header />

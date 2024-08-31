@@ -41,20 +41,20 @@ export default function SobreMim() {
       <section>
         <article className="flex  flex-col items-start gap-12 lg:flex-row">
           <div className="max-w-[400px] ">
-            <h1 className="mb-7 max-w-96 text-2xl font-bold dark:text-slate-200">
+            <h1 className="mb-7 max-w-96 text-2xl font-bold text-foreground">
               Conheça um pouco mais sobre{' '}
-              <span className="mb-3 bg-gradient-to-l from-[#9CC2FF] via-[#547AFF] to-[#263789] bg-clip-text text-3xl font-semibold tracking-tight text-transparent dark:to-slate-200">
+              <span className="mb-3  text-3xl font-semibold tracking-tight text-foreground">
                 Roni Lucas
               </span>
             </h1>
             <div className="space-y-4">
-              <p className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <p className="text-base font-medium  ">
                 Recentemente me formei na Universidade Nove ( em DEZ2023) pela
                 influência de um parênte bem próximo ser desenvolvedor, me senti
                 interessado na área antes mesmo de ingressar na faculdade e foi
                 assim que tive meu primeiro contato com programação.
               </p>
-              <p className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <p className="text-base font-medium text-foreground">
                 Sou um Desenvolvedor com foco no Frontend com vertente no
                 Backend e em Design. Adoro me desafiar em layouts limpos e
                 expressivos logo, o entusiasmo para criar o Frontend do layout é
@@ -63,7 +63,7 @@ export default function SobreMim() {
                 progresso e nunca pensei que me encontraria da forma como me
                 encontrei em criar APIS e regras de negócio!
               </p>
-              <p className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <p className="text-base font-medium text-foreground">
                 Tenho experiência no desenvolvimento de sites institucionais,
                 e-commerces, Landing Pages, SEO (Search Engine Optimization) e
                 familiariazado com as regras do PageSpeed. Além de fazer alguns
@@ -83,58 +83,48 @@ export default function SobreMim() {
         </article>
         <article className="mt-8  flex w-full flex-wrap justify-between  gap-6">
           <div className="min-w-[270px]">
-            <header className="mb-3 font-semibold text-slate-800 dark:text-slate-200">
+            <header className="mb-3 font-semibold text-foreground">
               💻 Áreas de Expertise
             </header>
             <ul>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <li className="text-base font-medium text-foreground">
                 Desenvolvimento FrontEnd
               </li>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <li className="text-base font-medium text-foreground">
                 Desenvolvimento BackEnd
               </li>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <li className="text-base font-medium text-foreground">
                 Web Design
               </li>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <li className="text-base font-medium text-foreground">
                 SEO (Search Engine Optimaztion)
               </li>
             </ul>
           </div>
           <div className="min-w-[270px]">
-            <header className="mb-3 font-semibold text-slate-800 dark:text-slate-200">
+            <header className="mb-3 font-semibold text-foreground">
               👨‍💻 Atualmente estudando
             </header>
             <ul>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
-                NextJS
-              </li>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
-                NodeJS
-              </li>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
-                Docker
-              </li>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <li className="text-base font-medium text-foreground">NextJS</li>
+              <li className="text-base font-medium text-foreground">NodeJS</li>
+              <li className="text-base font-medium text-foreground">Docker</li>
+              <li className="text-base font-medium text-foreground">
                 SEO (Search Engine Optimaztion)
               </li>
             </ul>
           </div>
           <div className="min-w-[270px]">
-            <header className="mb-3 font-semibold text-slate-800 dark:text-slate-200">
+            <header className="mb-3 font-semibold text-foreground">
               ☕ Interesses pessoais
             </header>
             <ul>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
-                Luta
-              </li>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <li className="text-base font-medium text-foreground">Luta</li>
+              <li className="text-base font-medium text-foreground">
                 Desenhar
               </li>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
-                Futebol
-              </li>
-              <li className="text-base font-medium text-slate-600 dark:text-slate-300">
+              <li className="text-base font-medium text-foreground">Futebol</li>
+              <li className="text-base font-medium text-foreground">
                 Inteligencia emocional e comportamental
               </li>
             </ul>
