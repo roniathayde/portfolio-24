@@ -18,7 +18,7 @@ export default function Layout({
           <ScrollArea.Viewport className="flex max-h-screen flex-col items-center overflow-y-scroll    ">
             <Header />
             <main className="flex w-full   justify-center   ">
-              <div className="flex  justify-center">{children}</div>
+              <div className="flex w-full justify-center">{children}</div>
             </main>
             <Footer />
           </ScrollArea.Viewport>
