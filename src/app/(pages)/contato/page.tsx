@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import ImagemHomemSentado from '../../../assets/images/imagem-pagina-de-contato.svg'
+import ImagemHomemSentado from '@/assets/images/imagem-pagina-de-contato.svg'
 import { FormContact } from './form-contact'
 import type { Metadata } from 'next'
 

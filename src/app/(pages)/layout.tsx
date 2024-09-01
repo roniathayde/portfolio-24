@@ -1,10 +1,10 @@
 'use client'
 
-import { Footer } from './components/footer'
+import { Footer } from '@/components/footer'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 
-import { Header } from './components/header'
-import { ThemeProvider } from './components/theme/theme-provider'
+import { Header } from '@/components/header'
+import { ThemeProvider } from '@/components/theme/theme-provider'
 
 export default function Layout({
   children,

@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import ImagemComMic from '../../../assets/images/avatar-no-computador-falando-no-microfone 1.svg'
+import ImagemComMic from '@/assets/images/avatar-no-computador-falando-no-microfone 1.svg'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {

@@ -13,7 +13,7 @@ export default function RootLayout({
     <>
       <html lang="pt-br" className="">
         <body
-          className={` bg-background max-h-screen overflow-hidden ${inter.className}`}
+          className={` max-h-screen overflow-hidden bg-background ${inter.className}`}
         >
           {children}
         </body>

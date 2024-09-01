@@ -13,10 +13,11 @@ export function SheetDemo() {
         </Button>
       </SheetTrigger>
       <SheetContent>
-        <div className="flex flex-col gap-4 py-4">
+        <div className="flex h-full flex-col justify-center gap-6 py-4">
           <Link href="/">Trabalhos</Link>
           <Link href="/sobre-mim">Sobre mim</Link>
           <Link href="/contato">Contato</Link>
+          <Link href="/blog">Blog</Link>
         </div>
       </SheetContent>
     </Sheet>

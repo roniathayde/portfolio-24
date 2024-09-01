@@ -1,10 +1,13 @@
 'use client'
 
-import { Loader2, Mail, Phone, User } from 'lucide-react'
 import { useState } from 'react'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
+import { Label } from '@/components/ui/label'
+import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
+import { Button } from '@/components/ui/button'
 
 const fieldsFormSchema = z.object({
   firstName: z.string().min(1, 'O nome é obrigatório'),
@@ -24,7 +27,6 @@ type FieldsFormSchema = z.infer<typeof fieldsFormSchema> // tipagem ts inferenci
 
 export function FormContact() {
   const [emailSendSuccefully, setEmailSendSuccefully] = useState(false)
-  const [emailError, setEmailError] = useState(false)
 
   const {
     register,
@@ -41,25 +43,21 @@ export function FormContact() {
     phone,
     message,
   }: FieldsFormSchema) {
-    try {
-      const data = {
-        firstName,
-        lastName,
-        email,
-        phone,
-        message,
-      }
+    const data = {
+      firstName,
+      lastName,
+      email,
+      phone,
+      message,
+    }
 
-      const response = await fetch('https://www.ronilucas.com/api/form', {
-        method: 'POST',
-        body: JSON.stringify(data),
-      })
+    const response = await fetch('https://www.ronilucas.com/api/form', {
+      method: 'POST',
+      body: JSON.stringify(data),
+    })
 
-      if (response.ok) {
-        setEmailSendSuccefully(true)
-      }
-    } catch (e) {
-      setEmailError(true)
+    if (response.ok) {
+      setEmailSendSuccefully(true)
     }
   }
 
@@ -70,10 +68,10 @@ export function FormContact() {
           E-mail enviado com sucesso! Aguarde que entraremos em contato!
         </span>
       )}
-      {emailError && (
-        <span className="mb-2 block text-sm font-medium text-red-400">
-          Parece que ocorreu algum erro no envio do formulário. Por gentileza
-          entre em contato informando pontes014@gmail.com
+      {Object.keys(errors).length > 0 && (
+        <span className="text-xs font-bold text-destructive">
+          ocorreu um erro tente novamente ou entre em contato por{' '}
+          <i>pontes014@gmail.com</i>
         </span>
       )}
       <form
@@ -81,138 +79,59 @@ export function FormContact() {
         className="flex max-w-[567px] flex-col gap-2"
       >
         <div className="flex flex-col gap-2 lg:flex-row">
-          <div>
-            <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700 dark:border-slate-300 dark:focus-within:ring-slate-400">
-              <div className="px-4 py-6">
-                <User className="size-6 text-slate-500" />
-              </div>
-              <div className="flex w-full flex-col py-4">
-                <label
-                  htmlFor="firstName"
-                  className="text-sm font-medium text-slate-500"
-                >
-                  Primeiro nome
-                </label>
-                <input
-                  type="text"
-                  id="firstName"
-                  className="bg-transparent text-base font-semibold text-slate-800 outline-none dark:text-slate-200"
-                  {...register('firstName')}
-                />
-              </div>
-            </div>
-            {errors.firstName && (
-              <span className="text-sm text-red-500">
-                {errors.firstName.message}
-              </span>
-            )}
-          </div>
-          <div>
-            <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700 dark:border-slate-300 dark:focus-within:ring-slate-400">
-              <div className="px-4 py-6">
-                <User className="size-6 text-slate-500" />
-              </div>
-              <div className="flex w-full flex-col py-4">
-                <label
-                  htmlFor="lastName"
-                  className="text-sm font-medium text-slate-500"
-                >
-                  Último nome
-                </label>
-                <input
-                  type="text"
-                  id="lastName"
-                  className="bg-transparent text-base font-semibold text-slate-800 outline-none dark:text-slate-200"
-                  {...register('lastName')}
-                />
-              </div>
-            </div>
-            {errors.lastName && (
-              <span className="text-sm text-red-500">
-                {errors.lastName.message}
-              </span>
-            )}
-          </div>
-        </div>
-        <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700 dark:border-slate-300 dark:focus-within:ring-slate-400">
-          <div className="px-4 py-6">
-            <Mail className="size-6 text-slate-500" />
-          </div>
-          <div className="flex w-full flex-col py-4">
-            <label
-              htmlFor="email"
-              className="text-sm font-medium text-slate-500"
-            >
-              E-mail
-            </label>
-            <input
+          <div className=" w-full  items-center gap-1.5">
+            <Label htmlFor="firstName">Primeiro nome</Label>
+            <Input
               type="text"
-              id="email"
-              className=" bg-transparent text-base font-semibold text-slate-800 outline-none dark:text-slate-200"
-              {...register('email')}
+              id="firstName"
+              placeholder="Insira o primeiro nome"
+              {...register('firstName')}
+            />
+          </div>
+          <div className=" w-full  items-center gap-1.5">
+            <Label htmlFor="lastName">Último nome</Label>
+            <Input
+              type="text"
+              id="lastName"
+              placeholder="Insira último nome"
+              {...register('lastName')}
             />
           </div>
         </div>
-        {errors.email && (
-          <span className="text-sm text-red-500">{errors.email.message}</span>
-        )}
-        <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700 dark:border-slate-300 dark:focus-within:ring-slate-400">
-          <div className="px-4 py-6">
-            <Phone className="size-6 text-slate-500" />
-          </div>
-          <div className="flex w-full flex-col py-4">
-            <label
-              htmlFor="phone"
-              className="text-sm font-medium text-slate-500"
-            >
-              Celular
-            </label>
-            <input
-              type="string"
-              id="phone"
-              className=" bg-transparent text-base font-semibold text-slate-800 outline-none dark:text-slate-200"
-              {...register('phone')}
-            />
-          </div>
+        <div className=" w-full  items-center gap-1.5">
+          <Label htmlFor="email">E-mail</Label>
+          <Input
+            type="email"
+            id="email"
+            placeholder="Insira seu e-mail"
+            {...register('email')}
+          />
         </div>
-        {errors.phone && (
-          <span className="text-sm text-red-500">{errors.phone.message}</span>
-        )}
-        <div className="flex rounded border-2 border-slate-500 focus-within:border-slate-600 focus-within:ring-2 focus-within:ring-slate-700 dark:border-slate-300 dark:focus-within:ring-slate-400">
-          <div className="flex w-full flex-col p-4">
-            <label
-              htmlFor="message"
-              className="text-sm font-medium text-slate-500"
-            >
-              Descreva um resumo do porquê do contato
-            </label>
-            <textarea
-              id="message"
-              className="resize-none bg-transparent text-base font-semibold text-slate-800 outline-none dark:text-slate-200"
-              {...register('message')}
-            ></textarea>
-          </div>
-        </div>
-        {errors.message && (
-          <span className="text-sm text-red-500">{errors.message.message}</span>
-        )}
-        {!isSubmitting && (
-          <button
-            type="submit"
-            className="flex items-center justify-center rounded border-2 border-transparent bg-ocean-500 p-4 text-lg font-bold text-slate-100 outline-none hover:border-ocean-400 focus-visible:border-ocean-400 focus-visible:ring-2 focus-visible:ring-ocean-500"
-          >
-            Enviar mensagem
-          </button>
-        )}
 
-        {isSubmitting && (
-          <button
-            type="submit"
-            className="flex items-center justify-center rounded border-2 border-ocean-500 bg-transparent p-4 text-lg font-bold text-slate-100 outline-none hover:border-ocean-400 focus-visible:border-ocean-400 focus-visible:ring-2 focus-visible:ring-ocean-500"
-          >
-            <Loader2 className="size-6 animate-spin text-ocean-500" />
-          </button>
-        )}
+        <div className="grid w-full  items-center gap-1.5">
+          <Label htmlFor="phone">Celular </Label>
+          <Input
+            type="phone"
+            id="phone"
+            placeholder="Insira seu celular"
+            {...register('phone')}
+          />
+        </div>
+
+        <div className="grid w-full  items-center gap-1.5">
+          <Label htmlFor="message">
+            Descreva um resumo do porquê do contato
+          </Label>
+          <Textarea
+            id="message"
+            placeholder="Descreva o motivo do contato"
+            {...register('message')}
+          />
+        </div>
+
+        <Button disabled={isSubmitting} variant={'default'}>
+          Enviar mensagem
+        </Button>
       </form>
     </>
   )

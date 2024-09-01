@@ -1,6 +1,6 @@
 import { posts } from '#site/content'
 import { sortPosts } from '../../../../lib/utils'
-import { PostItem } from '../components/post-item'
+import { PostItem } from '@/components/post-item'
 
 export default async function Blog() {
   const sortedPosts = sortPosts(posts.filter((post) => post.published))
@@ -9,11 +9,11 @@ export default async function Blog() {
   return (
     <div className="flex  w-full max-w-4xl flex-col   gap-24 px-8 py-28">
       <div className="flex w-full flex-col items-start justify-start">
-        <h1 className="text-5xl font-bold tracking-tighter text-slate-800 dark:text-slate-200">
+        <h1 className="text-5xl font-bold tracking-tighter text-foreground">
           Blog
         </h1>
         <div className="w-full">
-          <span className="text-xl font-semibold tracking-tighter text-slate-800 dark:text-slate-200">
+          <span className="text-xl font-semibold tracking-tighter text-foreground">
             Minhas últimas postagens
           </span>
           <hr className="mb-8 mt-4" />

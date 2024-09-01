@@ -32,6 +32,12 @@ export function Header() {
           >
             Contato
           </Link>
+          <Link
+            href="/blog"
+            className="hidden font-medium text-foreground lg:flex lg:items-center"
+          >
+            Blog
+          </Link>
           <SheetDemo />
           <div className="flex ">
             <ModeToggle />
