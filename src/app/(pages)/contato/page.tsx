@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-import ImagemHomemSentado from '../../../assets/images/imagem-pagina-de-contato.svg'
+import ImagemHomemSentado from '@/assets/images/imagem-pagina-de-contato.svg'
 import { FormContact } from './form-contact'
 import type { Metadata } from 'next'
 
@@ -43,7 +43,7 @@ export default function Contato() {
     <div className="flex  w-full max-w-6xl  gap-24 px-3 py-28 lg:px-8">
       <section className="flex w-full flex-col gap-10 lg:flex-row">
         <article>
-          <h1 className="mb-7 text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-200">
+          <h1 className="mb-7 text-2xl font-bold tracking-tight text-foreground">
             Entre em contato
           </h1>
 

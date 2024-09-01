@@ -1,13 +1,13 @@
 import Image from 'next/image'
-import AvatarImage from '../assets/images/avatar-on-computer.svg'
-import ImageProject1 from '../assets/images/smartfix-imagem-ilustrativa-do-projeto-roni-lucas.png'
-import ImageProject2 from '../assets/images/larynx-imagem-ilustrativa-do-projeto-roni-lucas.jpg'
-import ImageProject3 from '../assets/images/hernia clinic imagem ilustrativa do projeto roni lucas.jpg'
-import ImageProject4 from '../assets/images/grandha cosmeticos imagem ilustrativa do projeto roni lucas.png'
-import ImageCourse1 from '../assets/images/rocketseat-cursos-realizados-ronilucas.png'
-import ImageCourse2 from '../assets/images/programadorbr-igor-oliveira-cursos-realizados-ronilucas.jpg'
-import ImageCourse3 from '../assets/images/otavio-miranda-cursos-realizados-ronilucas.png'
-import ImageCourse4 from '../assets/images/servliv-cursos-realizados-ronilucas.png'
+import AvatarImage from '@/assets/images/avatar-on-computer.svg'
+import ImageProject1 from '@/assets/images/smartfix-imagem-ilustrativa-do-projeto-roni-lucas.png'
+import ImageProject2 from '@/assets/images/larynx-imagem-ilustrativa-do-projeto-roni-lucas.jpg'
+import ImageProject3 from '@/assets/images/hernia clinic imagem ilustrativa do projeto roni lucas.jpg'
+import ImageProject4 from '@/assets/images/grandha cosmeticos imagem ilustrativa do projeto roni lucas.png'
+import ImageCourse1 from '@/assets/images/rocketseat-cursos-realizados-ronilucas.png'
+import ImageCourse2 from '@/assets/images/programadorbr-igor-oliveira-cursos-realizados-ronilucas.jpg'
+import ImageCourse3 from '@/assets/images/otavio-miranda-cursos-realizados-ronilucas.png'
+import ImageCourse4 from '@/assets/images/servliv-cursos-realizados-ronilucas.png'
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 
@@ -55,16 +55,14 @@ export default function Home() {
         <div className="flex  w-full max-w-4xl flex-col   gap-24 px-8 py-28">
           <section className="flex flex-col items-center gap-5 lg:grid lg:grid-cols-2  ">
             <article className="pt-7">
-              <h1 className="mb-6 max-w-80 text-2xl font-semibold text-slate-700 dark:text-slate-200">
+              <h1 className="mb-6 max-w-80 text-2xl font-semibold text-foreground">
                 Oi, eu sou Roni, um{' '}
-                <span className="  bg-gradient-to-l from-[#9CC2FF] via-[#547AFF] to-[#263789] bg-clip-text text-transparent  dark:to-slate-200 ">
-                  software developer
-                </span>{' '}
+                <span className="  text-foreground ">software developer</span>{' '}
                 com paixão no Front End
               </h1>
 
               <ul className="flex flex-col gap-3">
-                <li className="flex flex-wrap items-center gap-1 leading-tight  dark:text-slate-200">
+                <li className="flex flex-wrap items-center gap-1 leading-tight  text-foreground">
                   <span className="text-nowrap">
                     Desenvolvedor fullstack na
                   </span>
@@ -77,7 +75,7 @@ export default function Home() {
                   </Link>
                   &<span className="font-semibold">SuryaMED</span>
                 </li>
-                <li className="flex flex-wrap items-center gap-1 leading-tight dark:text-slate-200">
+                <li className="flex flex-wrap items-center gap-1 leading-tight text-foreground">
                   Formado pela
                   <Link
                     href="https://www.uninove.br"
@@ -87,7 +85,7 @@ export default function Home() {
                     Uninove <ArrowUpRight className="size-5 stroke-[3]" />
                   </Link>
                 </li>
-                <li className="flex flex-wrap items-center gap-1 leading-tight dark:text-slate-200">
+                <li className="flex flex-wrap items-center gap-1 leading-tight text-foreground">
                   Inspirado em soluções
                   <Link
                     href="/contato"
@@ -109,14 +107,14 @@ export default function Home() {
             </article>
           </section>
           <section>
-            <h2 className="mb-6 text-center text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-200 lg:text-left">
+            <h2 className="mb-6 text-center text-2xl font-bold tracking-tight text-foreground lg:text-left">
               Sites concluídos
             </h2>
             <article className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-2">
               <Link
                 href="https://smartfix.com.br/"
                 target="_blank"
-                className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700"
+                className="flex flex-col gap-2 rounded  bg-muted p-3 "
               >
                 <Image
                   src={ImageProject1}
@@ -125,14 +123,12 @@ export default function Home() {
                   width={380}
                   height={200}
                 />
-                <h3 className="font-bold text-slate-700 dark:text-slate-200 ">
-                  Smartfix
-                </h3>
+                <h3 className="font-bold text-foreground ">Smartfix</h3>
               </Link>
               <Link
                 href="https://larynx.com.br/"
                 target="_blank"
-                className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700"
+                className="flex flex-col gap-2 rounded bg-muted p-3"
               >
                 <Image
                   src={ImageProject2}
@@ -141,14 +137,12 @@ export default function Home() {
                   width={380}
                   height={200}
                 />
-                <h3 className="font-bold text-slate-700 dark:text-slate-200 ">
-                  Larynx
-                </h3>
+                <h3 className="font-bold text-foreground ">Larynx</h3>
               </Link>
               <Link
                 href="https://herniaclinic.com.br/"
                 target="_blank"
-                className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700"
+                className="flex flex-col gap-2 rounded bg-muted p-3"
               >
                 <Image
                   src={ImageProject3}
@@ -157,14 +151,12 @@ export default function Home() {
                   width={380}
                   height={200}
                 />
-                <h3 className="font-bold text-slate-700 dark:text-slate-200 ">
-                  Hérnia Clinic
-                </h3>
+                <h3 className="font-bold text-foreground ">Hérnia Clinic</h3>
               </Link>
               <Link
                 href="https://grandha.com.br/"
                 target="_blank"
-                className="flex flex-col gap-2 rounded bg-gray-100 p-3 dark:bg-slate-700"
+                className="flex flex-col gap-2 rounded bg-muted p-3"
               >
                 <Image
                   src={ImageProject4}
@@ -173,7 +165,7 @@ export default function Home() {
                   width={380}
                   height={200}
                 />
-                <h3 className="font-bold text-slate-700 dark:text-slate-200 ">
+                <h3 className="font-bold text-foreground ">
                   Grandha Cosméticos
                 </h3>
               </Link>
@@ -181,58 +173,58 @@ export default function Home() {
           </section>
 
           <section>
-            <h2 className="mb-6 text-center text-2xl  font-bold tracking-tight text-slate-900 dark:text-slate-200 lg:text-left">
+            <h2 className="mb-6 text-center text-2xl  font-bold tracking-tight text-foreground lg:text-left">
               Alguns dos meus projetos
             </h2>
             <article className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-2">
               <Link
                 href="https://github.com/roniathayde/feed-typescript"
-                className="flex flex-col gap-2 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+                className="flex flex-col gap-2 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
                 target="_blank"
               >
-                <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
+                <h3 className="text-base font-semibold text-foreground">
                   feed
                 </h3>
-                <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
+                <p className="text-sm font-normal text-foreground">
                   Um projeto de estudo para práticar conceitos de reactJS
                 </p>
                 <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
               </Link>
               <Link
                 href="https://github.com/roniathayde/pizzashop-web"
-                className="flex flex-col gap-2 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+                className="flex flex-col gap-2 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
                 target="_blank"
               >
-                <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
+                <h3 className="text-base font-semibold text-foreground">
                   pizzashop-web
                 </h3>
-                <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
+                <p className="text-sm font-normal text-foreground">
                   Um projeto de estudo para práticar conceitos de reactJS
                 </p>
                 <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
               </Link>
               <Link
                 href="https://github.com/roniathayde/nlx-expert-notes"
-                className="flex flex-col gap-2 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+                className="flex flex-col gap-2 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
                 target="_blank"
               >
-                <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
+                <h3 className="text-base font-semibold text-foreground">
                   nlx-expert-notes
                 </h3>
-                <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
+                <p className="text-sm font-normal text-foreground">
                   Um projeto de estudo para práticar conceitos de reactJS
                 </p>
                 <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
               </Link>
               <Link
                 href="https://github.com/roniathayde/tailwind-next"
-                className="flex flex-col gap-2 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+                className="flex flex-col gap-2 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
                 target="_blank"
               >
-                <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
+                <h3 className="text-base font-semibold text-foreground">
                   tailwind-next
                 </h3>
-                <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
+                <p className="text-sm font-normal text-foreground">
                   Um projeto de estudo para práticar conceitos de reactJS
                 </p>
                 <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
@@ -248,7 +240,7 @@ export default function Home() {
               <Link
                 href="https://www.rocketseat.com.br/"
                 target="_blank"
-                className="flex gap-4 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+                className="flex gap-4 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
               >
                 <Image
                   src={ImageCourse1}
@@ -258,10 +250,10 @@ export default function Home() {
                   alt="imagem ilustrativa do curso da Rocketseat feito pelo Roni Lucas"
                 />
                 <div className="flex flex-col">
-                  <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
+                  <h3 className="text-base font-semibold text-foreground">
                     Rocketseat
                   </h3>
-                  <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
+                  <p className="text-sm font-normal text-foreground">
                     Plataforma de conteúdo educacional tecnológico Fullstack
                   </p>
                   <ArrowUpRight className="size-5 self-end stroke-[3] dark:text-slate-200" />
@@ -270,7 +262,7 @@ export default function Home() {
               <Link
                 href="https://programadorbr.com/"
                 target="_blank"
-                className="flex gap-4 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+                className="flex gap-4 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
               >
                 <Image
                   src={ImageCourse2}
@@ -280,10 +272,10 @@ export default function Home() {
                   className="h-[71px] min-w-[91px] object-cover"
                 />
                 <div className="flex flex-col">
-                  <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
+                  <h3 className="text-base font-semibold text-foreground">
                     ProgramadorBR
                   </h3>
-                  <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
+                  <p className="text-sm font-normal text-foreground">
                     Fullstack curso focado em JavaScript. Por Igor Oliveira
                   </p>
                   <ArrowUpRight className="size-5 self-end stroke-[3] dark:text-slate-200" />
@@ -292,7 +284,7 @@ export default function Home() {
               <Link
                 href="https://www.udemy.com/course/curso-de-reactjs-nextjs-completo-do-basico-ao-avancado/"
                 target="_blank"
-                className="flex gap-4 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+                className="flex gap-4 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
               >
                 <Image
                   src={ImageCourse3}
@@ -302,10 +294,10 @@ export default function Home() {
                   className="h-[71px] min-w-[91px] object-cover"
                 />
                 <div className="flex flex-col">
-                  <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
+                  <h3 className="text-base font-semibold text-foreground">
                     Curso de React.Js e Next.Js (nível intermediário e avançado)
                   </h3>
-                  <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
+                  <p className="text-sm font-normal text-foreground">
                     Conteúdo do ecossistema React com Next. Contextos, Data
                     Fetching e mais. por Otavio Miranda
                   </p>
@@ -315,7 +307,7 @@ export default function Home() {
               <Link
                 href="https://www.udemy.com/course/javascript-completo-2018-do-iniciante-ao-mestre/"
                 target="_blank"
-                className="flex gap-4 rounded bg-gray-100 px-5 py-4 hover:bg-gray-200/50 hover:transition-colors dark:bg-slate-700"
+                className="flex gap-4 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
               >
                 <Image
                   src={ImageCourse4}
@@ -325,10 +317,10 @@ export default function Home() {
                   className="h-[71px] min-w-[91px]"
                 />
                 <div className="flex flex-col">
-                  <h3 className="text-base font-semibold text-slate-600 dark:text-slate-200">
+                  <h3 className="text-base font-semibold text-foreground">
                     Curso de JavaScript Completo
                   </h3>
-                  <p className="text-sm font-normal text-slate-600 dark:text-slate-200">
+                  <p className="text-sm font-normal text-foreground">
                     Curso de Javascript completo. Classes, funções, arrays e
                     mais. Por Daniel Tapias Morales
                   </p>

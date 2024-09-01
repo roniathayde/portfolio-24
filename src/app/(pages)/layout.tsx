@@ -1,10 +1,10 @@
 'use client'
 
-import { Footer } from './components/footer'
+import { Footer } from '@/components/footer'
 import * as ScrollArea from '@radix-ui/react-scroll-area'
 
-import { Header } from './components/header'
-import { ThemeProvider } from './components/theme/theme-provider'
+import { Header } from '@/components/header'
+import { ThemeProvider } from '@/components/theme/theme-provider'
 
 export default function Layout({
   children,
@@ -13,12 +13,17 @@ export default function Layout({
 }>) {
   return (
     <>
-      <ThemeProvider storageKey="pizzashop-theme" defaultTheme="dark">
+      <ThemeProvider
+        attribute="class"
+        defaultTheme="system"
+        enableSystem
+        disableTransitionOnChange
+      >
         <ScrollArea.Root className="w-full justify-center " type="hover">
           <ScrollArea.Viewport className="flex max-h-screen flex-col items-center overflow-y-scroll    ">
             <Header />
             <main className="flex w-full   justify-center   ">
-              <div className="flex  justify-center">{children}</div>
+              <div className="flex w-full justify-center">{children}</div>
             </main>
             <Footer />
           </ScrollArea.Viewport>
