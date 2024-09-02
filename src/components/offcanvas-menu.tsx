@@ -8,7 +8,7 @@ export function SheetDemo() {
   return (
     <Sheet>
       <SheetTrigger asChild>
-        <Button className="lg:hidden" variant="outline">
+        <Button aria-label="Menu" className="lg:hidden" variant="outline">
           <Menu />
         </Button>
       </SheetTrigger>
