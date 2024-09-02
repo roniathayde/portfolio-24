@@ -1,6 +1,11 @@
 import { posts } from '#site/content'
 import { sortPosts } from '../../../../lib/utils'
 import { PostItem } from '@/components/post-item'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Blog | Desenvolvedor Fullstack',
+}
 
 export default async function Blog() {
   const sortedPosts = sortPosts(posts.filter((post) => post.published))

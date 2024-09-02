@@ -1,40 +1,11 @@
 import Image from 'next/image'
 import ImagemComMic from '@/assets/images/avatar-no-computador-falando-no-microfone 1.svg'
-import type { Metadata } from 'next'
+import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Sobre mim | Roni Lucas',
-  description:
-    'Um pouco mais sobre meus interesses profissionais e gostos pessoais. Saiba mais!',
-  robots: {
-    follow: true,
-    index: true,
-  },
-  openGraph: {
-    images: ['https://www.ronilucas.com/opengraph-image.jpg'],
-    authors: 'Roni Lucas',
-    countryName: 'Brazil',
-    emails: 'pontes014@gmail.com',
-    firstName: 'Roni',
-    lastName: 'Lucas',
-    locale: 'pt-br',
-  },
-  twitter: {
-    images: ['https://www.ronilucas.com/opengraph-image.jpg'],
-    site: 'https://www.ronilucas.com',
-  },
-  icons: {
-    icon: '/favicon.ico',
-  },
-  keywords: [
-    'Sobre mim',
-    'Roni Lucas',
-    'Desenvolvedor',
-    'Frontend',
-    'Backend',
-    'Fullstack',
-  ],
+  title: 'Sobre mim | Desenvolvedor Fullstack',
 }
+
 export default function SobreMim() {
   return (
     <div className="flex  w-full max-w-4xl flex-col   gap-24 px-8 py-28">
