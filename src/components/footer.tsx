@@ -25,13 +25,25 @@ export function Footer() {
             Conteúdo
           </span>
           <Link href="/" className="mb-2 text-sm font-medium text-foreground">
-            Trabalhos
+            Início
           </Link>
-          <Link href="/" className="mb-2 text-sm font-medium text-foreground">
+          <Link
+            href="/sobre-mim"
+            className="mb-2 text-sm font-medium text-foreground"
+          >
             Sobre mim
           </Link>
-          <Link href="/" className="mb-2 text-sm font-medium text-foreground">
+          <Link
+            href="/contato"
+            className="mb-2 text-sm font-medium text-foreground"
+          >
             Contato
+          </Link>
+          <Link
+            href="/blog"
+            className="mb-2 text-sm font-medium text-foreground"
+          >
+            Blog
           </Link>
         </div>
       </div>
