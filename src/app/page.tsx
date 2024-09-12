@@ -84,7 +84,7 @@ export default function Home() {
                 type="single"
                 collapsible
               >
-                <AccordionItem value="item-0">
+                <AccordionItem value="item-0" className="w-full">
                   <AccordionTrigger>Proposta personalizada</AccordionTrigger>
                   <AccordionContent>
                     Sua empresa é única, e por isso, a proposta que nós
@@ -105,7 +105,7 @@ export default function Home() {
                     investimento pretendido.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-1">
+                <AccordionItem value="item-1" className="w-full">
                   <AccordionTrigger>Desenvolvimento de sites</AccordionTrigger>
                   <AccordionContent>
                     É fundamental para todo negócio que quer se manter
@@ -123,7 +123,7 @@ export default function Home() {
                     suas vendas, afinal:
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-2">
+                <AccordionItem value="item-2" className="w-full">
                   <AccordionTrigger>SEO - Otimização do site?</AccordionTrigger>
                   <AccordionContent>
                     Para ser influente e conquistar mercado também na internet
@@ -137,7 +137,7 @@ export default function Home() {
                     faz com que você se torne referência.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-3">
+                <AccordionItem value="item-3" className="w-full">
                   <AccordionTrigger>Layouts personalizados</AccordionTrigger>
                   <AccordionContent>
                     Você não terá a desagradável surpresa de encontrar outro
@@ -151,7 +151,7 @@ export default function Home() {
                     mercado e ganhar destaque.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-4">
+                <AccordionItem value="item-4" className="w-full">
                   <AccordionTrigger>
                     Para todos os dispositivos
                   </AccordionTrigger>
@@ -168,7 +168,7 @@ export default function Home() {
                     navegação muito mais dinâmica e intuitiva.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-5">
+                <AccordionItem value="item-5" className="w-full">
                   <AccordionTrigger>Manutenção do site</AccordionTrigger>
                   <AccordionContent>
                     Os sites precisam de atualizações regulares, verificações de
@@ -179,7 +179,7 @@ export default function Home() {
                     protegerem seu site.
                   </AccordionContent>
                 </AccordionItem>
-                <AccordionItem value="item-6">
+                <AccordionItem value="item-6" className="w-full">
                   <AccordionTrigger>Postagem e engajamento</AccordionTrigger>
                   <AccordionContent>
                     Para conquistar público e ter sucesso com uma loja física,
