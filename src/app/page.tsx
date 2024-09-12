@@ -1,47 +1,41 @@
 import Image from 'next/image'
 import AvatarImage from '@/assets/images/avatar-on-computer.svg'
-import ImageProject1 from '@/assets/images/smartfix-imagem-ilustrativa-do-projeto-roni-lucas.png'
-import ImageProject2 from '@/assets/images/larynx-imagem-ilustrativa-do-projeto-roni-lucas.jpg'
-import ImageProject3 from '@/assets/images/hernia clinic imagem ilustrativa do projeto roni lucas.jpg'
-import ImageProject4 from '@/assets/images/grandha cosmeticos imagem ilustrativa do projeto roni lucas.png'
-import ImageCourse1 from '@/assets/images/rocketseat-cursos-realizados-ronilucas.png'
-import ImageCourse2 from '@/assets/images/programadorbr-igor-oliveira-cursos-realizados-ronilucas.jpg'
-import ImageCourse3 from '@/assets/images/otavio-miranda-cursos-realizados-ronilucas.png'
-import ImageCourse4 from '@/assets/images/servliv-cursos-realizados-ronilucas.png'
+
 import Link from 'next/link'
 import { ArrowUpRight } from 'lucide-react'
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion'
+
 import Layout from './(pages)/layout'
+import { ProjectCompleted } from '@/components/project-completed'
 
 export default function Home() {
   return (
     <>
       <Layout>
-        <div className="flex  w-full max-w-4xl flex-col   gap-24 px-8 py-28">
+        <div className="flex w-full  max-w-4xl  flex-col   gap-24 px-8 py-28">
           <section className="flex flex-col items-center gap-5 lg:grid lg:grid-cols-2  ">
             <article className="pt-7">
               <h1 className="mb-6 max-w-80 text-2xl font-semibold text-foreground">
-                Oi, eu sou Roni, um{' '}
-                <span className="  text-foreground ">software developer</span>{' '}
-                com paixão no Front End
+                Oi, eu sou Roni! <br />
+                um{' '}
+                <span className="font-bold italic text-foreground">
+                  Desenvolvedor
+                </span>{' '}
+                com paixão em soluções web
               </h1>
 
               <ul className="flex flex-col gap-3">
                 <li className="flex flex-wrap items-center gap-1 leading-tight  text-foreground">
-                  <span className="text-nowrap">
-                    Desenvolvedor fullstack na
-                  </span>
-                  <Link
-                    href="https://suryamkt.com.br"
-                    target="_blank"
-                    className="flex items-center font-semibold"
-                  >
-                    SuryaMKT <ArrowUpRight className="size-5 stroke-[3]" />
-                  </Link>
-                  &<span className="font-semibold">SuryaMED</span>
+                  <span className="text-nowrap">Desenvolvedor Fullstack</span>
                 </li>
                 <li className="flex flex-wrap items-center gap-1 leading-tight text-foreground">
-                  Formado pela
+                  Formado em Desenvolvimento de Sistemas pela
                   <Link
                     href="https://www.uninove.br"
                     target="_blank"
@@ -51,14 +45,16 @@ export default function Home() {
                   </Link>
                 </li>
                 <li className="flex flex-wrap items-center gap-1 leading-tight text-foreground">
-                  Inspirado em soluções
-                  <Link
-                    href="/contato"
-                    className="flex items-center font-semibold"
-                  >
-                    inovadoras
-                    <ArrowUpRight className="size-5 stroke-[3]" />
-                  </Link>
+                  Especialista na construção de sites
+                </li>
+                <li className="flex flex-wrap items-center gap-1 leading-tight text-foreground">
+                  Especialista na construção de Layouts
+                </li>
+                <li className="flex flex-wrap items-center gap-1 leading-tight text-foreground">
+                  Construi sites que hoje batem 10.000+ visitas diarias
+                </li>
+                <li className="flex flex-wrap items-center gap-1 leading-tight text-foreground">
+                  2+ anos na área
                 </li>
               </ul>
             </article>
@@ -73,225 +69,133 @@ export default function Home() {
           </section>
           <section>
             <h2 className="mb-6 text-center text-2xl font-bold tracking-tight text-foreground lg:text-left">
-              Sites concluídos
+              Alguns projetos concluídos
             </h2>
-            <article className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-2">
-              <Link
-                href="https://smartfix.com.br/"
-                target="_blank"
-                className="flex flex-col gap-2 rounded  bg-muted p-3 "
-              >
-                <Image
-                  src={ImageProject1}
-                  alt="imagem do site smartfix desenvolvido por Roni Lucas"
-                  className=" rounded"
-                  width={380}
-                  height={200}
-                />
-                <h3 className="font-bold text-foreground ">Smartfix</h3>
-              </Link>
-              <Link
-                href="https://larynx.com.br/"
-                target="_blank"
-                className="flex flex-col gap-2 rounded bg-muted p-3"
-              >
-                <Image
-                  src={ImageProject2}
-                  alt="imagem do site Larynx desenvolvido por Roni Lucas"
-                  className=" rounded"
-                  width={380}
-                  height={200}
-                />
-                <h3 className="font-bold text-foreground ">Larynx</h3>
-              </Link>
-              <Link
-                href="https://herniaclinic.com.br/"
-                target="_blank"
-                className="flex flex-col gap-2 rounded bg-muted p-3"
-              >
-                <Image
-                  src={ImageProject3}
-                  alt="imagem do site MedguideXP desenvolvido por Roni Lucas"
-                  className=" rounded"
-                  width={380}
-                  height={200}
-                />
-                <h3 className="font-bold text-foreground ">Hérnia Clinic</h3>
-              </Link>
-              <Link
-                href="https://grandha.com.br/"
-                target="_blank"
-                className="flex flex-col gap-2 rounded bg-muted p-3"
-              >
-                <Image
-                  src={ImageProject4}
-                  alt="imagem do site ABCG desenvolvido por Roni Lucas"
-                  className=" rounded"
-                  width={380}
-                  height={200}
-                />
-                <h3 className="font-bold text-foreground ">
-                  Grandha Cosméticos
-                </h3>
-              </Link>
-            </article>
+            <ProjectCompleted />
           </section>
 
           <section>
             <h2 className="mb-6 text-center text-2xl  font-bold tracking-tight text-foreground lg:text-left">
-              Alguns dos meus projetos
+              Sua experiência em 1º lugar!
             </h2>
-            <article className="flex flex-col items-center gap-6 lg:grid lg:grid-cols-2">
-              <Link
-                href="https://github.com/roniathayde/feed-typescript"
-                className="flex flex-col gap-2 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
-                target="_blank"
+            <article className="">
+              <Accordion
+                className="flex flex-col items-start gap-6 lg:grid lg:grid-cols-2"
+                type="single"
+                collapsible
               >
-                <h3 className="text-base font-semibold text-foreground">
-                  feed
-                </h3>
-                <p className="text-sm font-normal text-foreground">
-                  Um projeto de estudo para práticar conceitos de reactJS
-                </p>
-                <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
-              </Link>
-              <Link
-                href="https://github.com/roniathayde/pizzashop-web"
-                className="flex flex-col gap-2 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
-                target="_blank"
-              >
-                <h3 className="text-base font-semibold text-foreground">
-                  pizzashop-web
-                </h3>
-                <p className="text-sm font-normal text-foreground">
-                  Um projeto de estudo para práticar conceitos de reactJS
-                </p>
-                <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
-              </Link>
-              <Link
-                href="https://github.com/roniathayde/nlx-expert-notes"
-                className="flex flex-col gap-2 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
-                target="_blank"
-              >
-                <h3 className="text-base font-semibold text-foreground">
-                  nlx-expert-notes
-                </h3>
-                <p className="text-sm font-normal text-foreground">
-                  Um projeto de estudo para práticar conceitos de reactJS
-                </p>
-                <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
-              </Link>
-              <Link
-                href="https://github.com/roniathayde/tailwind-next"
-                className="flex flex-col gap-2 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
-                target="_blank"
-              >
-                <h3 className="text-base font-semibold text-foreground">
-                  tailwind-next
-                </h3>
-                <p className="text-sm font-normal text-foreground">
-                  Um projeto de estudo para práticar conceitos de reactJS
-                </p>
-                <ArrowUpRight className="size-5 stroke-[3] dark:text-slate-200" />
-              </Link>
-            </article>
-          </section>
-
-          <section>
-            <h2 className="mb-6 text-center text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-200 lg:text-left">
-              Alguns cursos realizados
-            </h2>
-            <article className="flex flex-col items-stretch gap-6 lg:grid lg:grid-cols-2">
-              <Link
-                href="https://www.rocketseat.com.br/"
-                target="_blank"
-                className="flex gap-4 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
-              >
-                <Image
-                  src={ImageCourse1}
-                  width={91}
-                  height={71}
-                  className="h-[71px] min-w-[91px]"
-                  alt="imagem ilustrativa do curso da Rocketseat feito pelo Roni Lucas"
-                />
-                <div className="flex flex-col">
-                  <h3 className="text-base font-semibold text-foreground">
-                    Rocketseat
-                  </h3>
-                  <p className="text-sm font-normal text-foreground">
-                    Plataforma de conteúdo educacional tecnológico Fullstack
-                  </p>
-                  <ArrowUpRight className="size-5 self-end stroke-[3] dark:text-slate-200" />
-                </div>
-              </Link>
-              <Link
-                href="https://programadorbr.com/"
-                target="_blank"
-                className="flex gap-4 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
-              >
-                <Image
-                  src={ImageCourse2}
-                  width={91}
-                  height={71}
-                  alt="imagem ilustrativa do curso do ProgramadorBR feito pelo Roni Lucas"
-                  className="h-[71px] min-w-[91px] object-cover"
-                />
-                <div className="flex flex-col">
-                  <h3 className="text-base font-semibold text-foreground">
-                    ProgramadorBR
-                  </h3>
-                  <p className="text-sm font-normal text-foreground">
-                    Fullstack curso focado em JavaScript. Por Igor Oliveira
-                  </p>
-                  <ArrowUpRight className="size-5 self-end stroke-[3] dark:text-slate-200" />
-                </div>
-              </Link>
-              <Link
-                href="https://www.udemy.com/course/curso-de-reactjs-nextjs-completo-do-basico-ao-avancado/"
-                target="_blank"
-                className="flex gap-4 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
-              >
-                <Image
-                  src={ImageCourse3}
-                  width={91}
-                  height={71}
-                  alt="imagem ilustrativa do curso do Otavio Miranda feito pelo Roni Lucas"
-                  className="h-[71px] min-w-[91px] object-cover"
-                />
-                <div className="flex flex-col">
-                  <h3 className="text-base font-semibold text-foreground">
-                    Curso de React.Js e Next.Js (nível intermediário e avançado)
-                  </h3>
-                  <p className="text-sm font-normal text-foreground">
-                    Conteúdo do ecossistema React com Next. Contextos, Data
-                    Fetching e mais. por Otavio Miranda
-                  </p>
-                  <ArrowUpRight className="size-5 self-end stroke-[3] dark:text-slate-200" />
-                </div>
-              </Link>
-              <Link
-                href="https://www.udemy.com/course/javascript-completo-2018-do-iniciante-ao-mestre/"
-                target="_blank"
-                className="flex gap-4 rounded bg-muted px-5 py-4 hover:bg-muted-foreground/40 hover:transition-colors"
-              >
-                <Image
-                  src={ImageCourse4}
-                  width={91}
-                  height={71}
-                  alt="imagem ilustrativa do curso da Serliv por Daniel Tapias Morales feito pelo Roni Lucas"
-                  className="h-[71px] min-w-[91px]"
-                />
-                <div className="flex flex-col">
-                  <h3 className="text-base font-semibold text-foreground">
-                    Curso de JavaScript Completo
-                  </h3>
-                  <p className="text-sm font-normal text-foreground">
-                    Curso de Javascript completo. Classes, funções, arrays e
-                    mais. Por Daniel Tapias Morales
-                  </p>
-                  <ArrowUpRight className="size-5 self-end stroke-[3] dark:text-slate-200" />
-                </div>
-              </Link>
+                <AccordionItem value="item-0">
+                  <AccordionTrigger>Proposta personalizada</AccordionTrigger>
+                  <AccordionContent>
+                    Sua empresa é única, e por isso, a proposta que nós
+                    oferecemos para você também é. Afinal, nosso intuito é
+                    promover o crescimento e destaque do seu negócio na
+                    internet, mas respeitando aquilo que você precisa. Ou seja,
+                    não trabalhamos com tabelas ou sistemas fixos, porque
+                    entendemos que para alcançar aquilo que o cliente precisa
+                    devemos ser flexíveis, dinâmicos e adaptáveis, para
+                    chegarmos ao ponto ideal para cada um deles. Então, aqui
+                    você terá um atendimento personalizado, nós escutamos o que
+                    você tem a dizer, estudamos o que sua empresa precisa e
+                    traçamos estratégias de acordo com as metas e objetivos que
+                    você tem para ela. Dessa maneira conseguimos fazer o
+                    planejamento adequado para o seu tipo de negócio, seguindo
+                    as características particulares da sua empresa e que
+                    respeite o seu orçamento, estando dentro da margem de
+                    investimento pretendido.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>Desenvolvimento de sites</AccordionTrigger>
+                  <AccordionContent>
+                    É fundamental para todo negócio que quer se manter
+                    competitivo no mercado estar na internet. Frente a isso, nos
+                    últimos anos surgiram diversas ferramentas e plataformas
+                    para criação de sites, porém, seguindo um padrão
+                    pré-definido. Mas o seu negócio não pode ser mais do mesmo.
+                    Ele precisa de identidade e ela deve estar expressa também
+                    no site. Afinal, as pessoas vão associar esse espaço ao seu
+                    nome, sua marca e seus produtos. É por isso que você precisa
+                    de uma agência de marketing digital como nós, pois nos
+                    comprometemos com o desenvolvimento de sites totalmente
+                    personalizados, realmente fieis ao seu negócio. Com nosso
+                    suporte seu site vai representar o seu negócio e aumentar
+                    suas vendas, afinal:
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>SEO - Otimização do site?</AccordionTrigger>
+                  <AccordionContent>
+                    Para ser influente e conquistar mercado também na internet
+                    não basta estar nela, é preciso que seu público saiba que
+                    você está ali e consiga te encontrar. Para isso é que são
+                    utilizadas as técnicas de otimização SEO. Somos uma agência
+                    de marketing digital que trabalha com estratégias eficazes
+                    para que seu site tenha destaque no segmento em que você
+                    atua. Assim, ele será identificado como relevante pelos
+                    sites de busca e facilmente as pessoas vão te achar. O que
+                    faz com que você se torne referência.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Layouts personalizados</AccordionTrigger>
+                  <AccordionContent>
+                    Você não terá a desagradável surpresa de encontrar outro
+                    site igual ao seu na internet, com apenas alguns detalhes
+                    diferentes. Ele será único, como seu negócio deve ser, para
+                    que seus clientes antigos reconheçam sua marca e ela seja
+                    atrativa para os clientes em potencial. Suas cores, o design
+                    que combina com seu negócio, a sua logomarca e a linguagem
+                    que seu público entende. Tudo para que seu site seja uma
+                    extensão do seu negócio e faça a sua marca se fortalecer no
+                    mercado e ganhar destaque.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>
+                    Para todos os dispositivos
+                  </AccordionTrigger>
+                  <AccordionContent>
+                    Sites responsivos são fundamentais atualmente, afinal, mais
+                    da metade dos acessos à internet no Brasil é realizado por
+                    meio de aparelhos móveis, como os celulares. Para alguns
+                    segmentos, esse número chega a atingir os 80% do total.
+                    Sendo assim, é importante que o seu site esteja adaptado
+                    para ser visualizado sem problemas nesse tipo de aparelho
+                    também. Tanto em computadores como tablets e smartphones,
+                    seja em formato vertical ou paisagem, o layout será
+                    agradável para o usuário, tornando a experiência da
+                    navegação muito mais dinâmica e intuitiva.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>Manutenção do site</AccordionTrigger>
+                  <AccordionContent>
+                    Os sites precisam de atualizações regulares, verificações de
+                    segurança, otimização de desempenho e solução de problemas
+                    regulares. Então, se você investiu em um site, por que não
+                    confiar no seu investimento com pessoas que conhecem ele por
+                    dentro e por fora? Deixe os profissionais manterem e
+                    protegerem seu site.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>Postagem e engajamento</AccordionTrigger>
+                  <AccordionContent>
+                    Para conquistar público e ter sucesso com uma loja física,
+                    não basta abrir as portas e esperar as pessoas entrarem. É
+                    preciso realizar um trabalho de divulgação para se tornar
+                    conhecido. E com o seu negócio na internet acontece o mesmo.
+                    Não basta criar um site e pronto. Afinal, existem milhões e
+                    milhões de sites, visíveis 24 horas por dia para todo mundo.
+                    Então, como se destacar entre tantos? Ora, com estratégias
+                    de marketing. Um profissional responsável vai te ajudar a
+                    aparecer na internet, ficar visível para que as pessoas
+                    possam te encontrar, conhecer o seu diferencial, interagir
+                    com sua marca e consumir seu produto ou serviços.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
             </article>
           </section>
         </div>

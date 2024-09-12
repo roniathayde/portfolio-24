@@ -5,7 +5,7 @@ import { SheetDemo } from './offcanvas-menu'
 
 export function Header() {
   return (
-    <header className="z-1 sticky top-0 border-b bg-background">
+    <header className="sticky top-0 z-[10] border-b bg-background">
       <div className="ml-auto mr-auto flex max-w-screen-xl items-center justify-between px-8 py-9">
         <Link
           href="/"
@@ -18,7 +18,7 @@ export function Header() {
             href="/"
             className="hidden font-medium text-foreground lg:flex lg:items-center"
           >
-            Trabalhos
+            Início
           </Link>
           <Link
             href="/sobre-mim"
