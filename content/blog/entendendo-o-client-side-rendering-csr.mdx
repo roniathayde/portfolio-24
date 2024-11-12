@@ -1,0 +1,88 @@
+---
+title: Entendendo o Client-Side Rendering (CSR) 🔥
+description: Aprenda como ranquear seu site para 1º no Google com técnicas de SEO eficazes, incluindo pesquisa de palavras-chave, otimização de conteúdo, SEO técnico, e mais!
+date: 2024-11-11 23:23:23
+published: true
+---
+
+## O que acontece quando um usuário acessa uma página nossa?
+
+Basicamente, quando o nosso cliente acessa uma aplicação (WEB), ele faz uma requisição, e ela precisa chegar em algum lugar…
+
+E essa requisição chega no nosso servidor.
+
+### O que seria esse client?
+
+Basicamente, o navegador do seu usuário.
+
+Mas… pode ser um client HTTP como Postman, Insomnia, outro servidor backend, etc.
+
+Como estamos falando de um ambiente web, vamos supor que isso é um navegador mesmo.
+
+---
+
+Essa requisição que o client faz é enviada para o servidor, que, por sua vez, pode ser uma VM (máquina virtual), um serviço da AWS S3, Cloudflare, ou qualquer outra coisa, mas ele precisa responder ao que o meu client pediu para aquela rota específica.
+
+Então, no nosso exemplo, nosso servidor pode retornar um arquivo HTML para nosso client, e todo mundo sai feliz.
+
+**Atenção**: a partir de agora, todos os pedidos feitos do CLIENTE para o servidor estarão em vermelho, e todos os retornos feitos do servidor para o cliente estarão em azul nas imagens seguintes para melhor compreensão.
+
+![Explicação do fluxo de requisições e respostas](/public/images/primeira-chamada.jpg)
+
+## O que acontece nas SPAs?
+
+Primeiro, vamos entender: **o que é SPA?**
+
+### O que é SPA?
+
+SPA vem de Single Page Application, ou "aplicações de página única".
+
+Essas são as aplicações mais convencionais, geralmente desenvolvidas em React.
+
+Para quem não está acostumado, no React, mesmo que destrinchamos 1000 páginas e 5000 componentes, no final, tudo se resume a um único HTML!
+
+![GIF explicativo](/public/images/gif-minion.gif)
+
+É basicamente isso que o torna um Single Page Application. O que acontece é que ele carrega todo o resto via JavaScript, e toda a mágica acontece 🪄.
+
+Por baixo dos panos, é uma chamada atrás da outra para entregar o que o cliente buscou a partir da URL… Vamos destrinchar esse caminho:
+
+- O cliente acessa `/posts`, fazendo uma requisição pro servidor.
+- O servidor retorna o HTML dessa rota.
+- O cliente, ao ler o HTML, encontra um arquivo chamado `script.js` (esse cara é brabo) e pede esse arquivo para o servidor.
+
+    ![Cliente pedindo script.js](/public/images/segunda-chamada.jpg)
+
+- O servidor encontra esse arquivo `script.js` e o retorna para o cliente.
+
+    ![Servidor retornando script.js](/public/images/terceira-chamada.jpg)
+
+- O cliente, agora com o JavaScript na mão, monta toda a página interativa.
+
+![Página interativa montada](/public/images/quarta-chamada.jpg)
+
+Tudo isso acontece em milésimos de segundos! (Se não estiver acontecendo, me manda um e-mail 😱)
+
+Então, é todo esse processo que ocorre quando estamos construindo um app React usando um Vite, por exemplo.
+
+## E onde fica o CSR em tudo isso?
+
+Bom, se você entendeu tudo acima, você entendeu o que é CSR, eu só esqueci de te avisar, rsrs.
+
+### CSR vem de Client-Side Rendering
+
+E por que chamamos assim? Pergunte a si mesmo ao reler o artigo: onde estamos renderizando a aplicação, se não no “Client-Side”?
+
+## E se não tem JavaScript? ☠️
+
+Se não tem JavaScript, então a página não é montada, e fim.
+
+Sério, você pode até fazer esse teste: entre numa aplicação feita com React puro (sem o framework Next.js, e depois você entenderá o porquê). Siga os passos:
+
+1. Inspecione a página.
+2. Clique em configurações no canto superior direito do Google Chrome.
+3. Role até a seção de Debugger.
+4. Marque a opção “Disable JavaScript”.
+5. Veja tudo explodir 💣 rsrssrs.
+
+Pense no processo que vimos acima. Se temos apenas o HTML e não temos o JavaScript executando no cliente, logo não há como a aplicação ser montada.
