@@ -1,6 +1,6 @@
 ---
 title: Entendendo o Client-Side Rendering (CSR) 🔥
-description: Aprenda como ranquear seu site para 1º no Google com técnicas de SEO eficazes, incluindo pesquisa de palavras-chave, otimização de conteúdo, SEO técnico, e mais!
+description: Entenda como funciona o Client-Side Rendering (CSR), desde a requisição do cliente até a resposta do servidor em aplicações web.
 date: 2024-11-11 23:23:23
 published: true
 ---
@@ -27,7 +27,7 @@ Então, no nosso exemplo, nosso servidor pode retornar um arquivo HTML para noss
 
 **Atenção**: a partir de agora, todos os pedidos feitos do CLIENTE para o servidor estarão em vermelho, e todos os retornos feitos do servidor para o cliente estarão em azul nas imagens seguintes para melhor compreensão.
 
-![Explicação do fluxo de requisições e respostas](/public/images/primeira-chamada.jpg)
+![Explicação do fluxo de requisições e respostas](/images/primeira-chamada.jpg)
 
 ## O que acontece nas SPAs?
 
@@ -41,7 +41,7 @@ Essas são as aplicações mais convencionais, geralmente desenvolvidas em React
 
 Para quem não está acostumado, no React, mesmo que destrinchamos 1000 páginas e 5000 componentes, no final, tudo se resume a um único HTML!
 
-![GIF explicativo](/public/images/gif-minion.gif)
+![GIF explicativo](/images/gif-minion.gif)
 
 É basicamente isso que o torna um Single Page Application. O que acontece é que ele carrega todo o resto via JavaScript, e toda a mágica acontece 🪄.
 
@@ -51,15 +51,15 @@ Por baixo dos panos, é uma chamada atrás da outra para entregar o que o client
 - O servidor retorna o HTML dessa rota.
 - O cliente, ao ler o HTML, encontra um arquivo chamado `script.js` (esse cara é brabo) e pede esse arquivo para o servidor.
 
-    ![Cliente pedindo script.js](/public/images/segunda-chamada.jpg)
+    ![Cliente pedindo script.js](/images/segunda-chamada.jpg)
 
 - O servidor encontra esse arquivo `script.js` e o retorna para o cliente.
 
-    ![Servidor retornando script.js](/public/images/terceira-chamada.jpg)
+    ![Servidor retornando script.js](/images/terceira-chamada.jpg)
 
 - O cliente, agora com o JavaScript na mão, monta toda a página interativa.
 
-![Página interativa montada](/public/images/quarta-chamada.jpg)
+![Página interativa montada](/images/quarta-chamada.jpg)
 
 Tudo isso acontece em milésimos de segundos! (Se não estiver acontecendo, me manda um e-mail 😱)
 
