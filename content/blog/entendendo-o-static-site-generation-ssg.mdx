@@ -1,0 +1,70 @@
+---
+title: Entendendo o Static Site Generation (SSG) 🔥
+description: Entenda como o Static Site Generation (SSG) otimiza o carregamento de páginas, gerando arquivos HTML no build para respostas rápidas e eficientes.
+date: 2024-11-15 15:15:15
+published: true
+---
+
+Aqui está o texto formatado em **MDX**:
+
+```mdx
+A fim de demonstração, supomos que dentro da nossa aplicação teremos várias rotas:
+
+```jsx
+export const routes = {
+  home: '/',
+  signUp: '/sign-up',
+  forgotPassword: '/forgot-password',
+}
+```
+
+![Demonstração de rotas](/images/ssg-primeira.jpg)
+
+No SSG, a nossa renderização começa no momento do build.
+
+No momento que estamos gerando o build da nossa aplicação, a ferramenta de build que estamos usando vai identificar quais páginas temos na aplicação e gerar **um arquivo HTML para cada rota**.
+
+Diferente do CSR, onde o HTML é gerado usando o navegador do usuário a partir de um arquivo `script.js`, no SSG, quando fazemos o build da aplicação, o output já contém as páginas renderizadas, com seus arquivos JavaScript prontos para fazer interações. A renderização do HTML que o usuário verá na tela já está pronta.
+
+![Exemplo de renderização no SSG](/images/ssg-segunda.jpg)
+
+Depois de gerar os arquivos das rotas no build, fazemos o upload desses arquivos para o servidor. Assim, quando o usuário acessar, por exemplo, `/sign-up`, ele receberá o `sign-up.html`, que é o arquivo HTML da página solicitada. Isso é diferente do CSR, onde apenas um `index.html` é retornado, e o JavaScript resolve as rotas no navegador do usuário.
+
+![Diferença entre CSR e SSG](/images/ssg-terceira.jpg)
+
+### Vantagens do SSG
+
+Dessa forma, o carregamento é **super rápido ⚡**, pois não precisamos resolver caminhos nem gerar HTML no momento da solicitação. O único trabalho do usuário será **ler o HTML**.
+
+#### Fluxo no CSR:
+
+1. Acessa a rota.
+2. Retorna o HTML.
+3. Pede o arquivo JavaScript.
+4. Lê o arquivo JavaScript.
+5. Executa o JavaScript.
+6. Agora sim, a aplicação aparece na tela.
+
+#### Fluxo no SSG:
+
+1. Acessa a rota.
+2. Retorna o HTML da rota solicitada ⚡.
+
+Mesmo usando SSG, arquivos JavaScript podem ser carregados no cliente para adicionar interatividade. A diferença é que esses arquivos não precisam renderizar o HTML, apenas complementar a aplicação.
+
+## Ferramentas
+
+- **Next.js** (React)
+- **Gatsby** (React)
+- **Astro** (compatível com React, Vue e outros frameworks, e está crescendo bastante!)
+
+> Obs.: O uso de Astro ainda é pouco comum em ambientes corporativos.
+
+## Casos de uso
+
+- Landing Pages
+- Sites institucionais
+- Blogs (*desde que tenham poucos posts por dia*)
+```
+
+Essa versão está bem formatada para MDX, pronta para uso com frameworks como Next.js ou Gatsby.
